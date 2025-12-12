@@ -1,0 +1,12 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 오렌지 그래픽 로고 -->
+  <g>
+    <path d="M0 20 L8 12 L16 20 L24 12 L32 20" stroke="#FF6B35" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="0" y="12" width="8" height="8" fill="#FF6B35"/>
+    <rect x="16" y="12" width="8" height="8" fill="#FF6B35"/>
+    <rect x="8" y="20" width="8" height="8" fill="#FF6B35"/>
+    <rect x="24" y="20" width="8" height="8" fill="#FF6B35"/>
+  </g>
+  <!-- 맡길랩 텍스트는 CSS로 처리 -->
+</svg>
+

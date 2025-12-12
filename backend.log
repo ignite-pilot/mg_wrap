@@ -1,0 +1,682 @@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8401
+ * Running on http://192.168.10.133:8401
+[33mPress CTRL+C to quit[0m
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+127.0.0.1 - - [04/Dec/2025 15:30:09] "[35m[1mGET /api/board/board HTTP/1.1[0m" 500 -
+127.0.0.1 - - [04/Dec/2025 15:30:09] "[35m[1mGET /api/board/posts?page=1&per_page=10 HTTP/1.1[0m" 500 -
+127.0.0.1 - - [04/Dec/2025 15:30:09] "[35m[1mGET /api/board/posts?page=1&per_page=10 HTTP/1.1[0m" 500 -
+127.0.0.1 - - [04/Dec/2025 15:30:09] "[35m[1mGET /api/board/board HTTP/1.1[0m" 500 -
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run.py', reloading
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+127.0.0.1 - - [04/Dec/2025 15:30:28] "[35m[1mGET /api/board/posts?page=1&per_page=10 HTTP/1.1[0m" 500 -
+127.0.0.1 - - [04/Dec/2025 15:30:28] "[35m[1mGET /api/board/board HTTP/1.1[0m" 500 -
+127.0.0.1 - - [04/Dec/2025 15:30:28] "[35m[1mGET /api/board/board HTTP/1.1[0m" 500 -
+127.0.0.1 - - [04/Dec/2025 15:30:28] "[35m[1mGET /api/board/posts?page=1&per_page=10 HTTP/1.1[0m" 500 -
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+127.0.0.1 - - [04/Dec/2025 16:33:39] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 16:33:39] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 16:33:39] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 16:33:39] "GET /api/board/board HTTP/1.1" 200 -
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/__init__.py', reloading
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/__init__.py', reloading
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/__init__.py', reloading
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/utils.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/utils.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/utils.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/retrieval.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/retrieval.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/disposal.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/retrieval.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/__init__.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/utils.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/retrieval.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/disposal.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/__init__.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/utils.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/retrieval.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/disposal.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run_tests_and_security.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run_tests_and_security.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run_tests_and_security.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run_tests_and_security.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run_tests_and_security.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run_tests_and_security.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run_tests_and_security.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run_tests_and_security.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run_tests_and_security.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+127.0.0.1 - - [04/Dec/2025 18:51:15] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 18:51:15] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 18:51:15] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 18:51:15] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/services/member_service.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/services/member_service.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/services/member_service.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/models.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/disposal.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/retrieval.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/services/member_service.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/services/member_service.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/services/member_service.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/conftest.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/conftest.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/conftest.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/conftest.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_security.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_security.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_security.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_security.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/conftest.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/conftest.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/services/member_service.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/models.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/retrieval.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/disposal.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/conftest.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_auth.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_security.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/services/member_service.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/models.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/retrieval.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/disposal.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/conftest.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_auth.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_security.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+127.0.0.1 - - [04/Dec/2025 19:04:33] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:04:33] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:04:33] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:04:33] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:04:42] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:04:42] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:04:42] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:04:42] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:04:43] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:04:43] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:04:43] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:04:43] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:04:44] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:04:44] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:04:44] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:04:44] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:08:38] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:08:38] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:08:38] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:08:38] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:08:39] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:08:39] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:08:39] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:08:39] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:09:52] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:09:52] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:09:52] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:09:52] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:10:38] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:10:38] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:10:38] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:10:38] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:10:39] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:10:39] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:10:39] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:10:40] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+127.0.0.1 - - [04/Dec/2025 19:11:42] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:11:42] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:11:42] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:11:42] "GET /api/board/board HTTP/1.1" 200 -
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+127.0.0.1 - - [04/Dec/2025 19:12:05] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:12:05] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:12:05] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:12:05] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:13:42] "POST /api/auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:13:43] "POST /api/auth/verify HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:13:43] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:13:43] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:13:43] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:13:43] "GET /api/board/board HTTP/1.1" 200 -
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+127.0.0.1 - - [04/Dec/2025 19:17:51] "POST /api/auth/verify HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:17:51] "POST /api/auth/verify HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:17:51] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:17:51] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:17:51] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:17:51] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:17:54] "GET /api/board/posts/4 HTTP/1.1" 200 -
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+127.0.0.1 - - [04/Dec/2025 19:21:39] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:21:39] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:21:39] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:21:39] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+127.0.0.1 - - [04/Dec/2025 19:21:56] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:21:56] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:21:56] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:21:56] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+127.0.0.1 - - [04/Dec/2025 19:22:02] "[32mGET /api/auth/oauth2/authorization/google HTTP/1.1[0m" 302 -
+127.0.0.1 - - [04/Dec/2025 19:22:06] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:22:06] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:22:06] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:22:06] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [04/Dec/2025 19:22:10] "[32mGET /api/auth/oauth2/authorization/google HTTP/1.1[0m" 302 -
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/__init__.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+127.0.0.1 - - [04/Dec/2025 19:24:16] "OPTIONS /api/auth/oauth2/authorization/google HTTP/1.1" 200 -
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/__init__.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+127.0.0.1 - - [04/Dec/2025 19:25:04] "[32mGET /api/auth/oauth2/authorization/google HTTP/1.1[0m" 302 -
+127.0.0.1 - - [04/Dec/2025 19:25:08] "[32mGET /api/auth/oauth2/authorization/google HTTP/1.1[0m" 302 -
+127.0.0.1 - - [04/Dec/2025 19:25:11] "[32mGET /api/auth/oauth2/authorization/google HTTP/1.1[0m" 302 -
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+127.0.0.1 - - [04/Dec/2025 19:27:41] "[32mGET /api/auth/oauth2/authorization/naver HTTP/1.1[0m" 302 -
+127.0.0.1 - - [04/Dec/2025 19:27:44] "[32mGET /api/auth/oauth2/authorization/naver HTTP/1.1[0m" 302 -
+127.0.0.1 - - [04/Dec/2025 19:27:46] "[32mGET /api/auth/oauth2/authorization/google HTTP/1.1[0m" 302 -
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+127.0.0.1 - - [04/Dec/2025 19:28:22] "[32mGET /api/auth/oauth2/authorization/google HTTP/1.1[0m" 302 -
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+127.0.0.1 - - [04/Dec/2025 19:30:15] "[32mGET /api/auth/oauth2/authorization/google HTTP/1.1[0m" 302 -
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/resource_tracker.py:297: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-sxzkbjue'}
+  warnings.warn(
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/resource_tracker.py:297: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-o04gn780'}
+  warnings.warn(

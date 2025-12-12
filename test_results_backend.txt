@@ -1,0 +1,384 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.0, pytest-9.0.1, pluggy-1.6.0 -- /Library/Frameworks/Python.framework/Versions/3.14/bin/python3
+cachedir: .pytest_cache
+rootdir: /Users/ignite/Documents/AI Coding/cursor_project/mg_wrap
+configfile: pytest.ini
+plugins: anyio-4.11.0, flask-1.3.0, cov-7.0.0
+collecting ... collected 46 items
+
+tests/test_assets.py::TestAssetNumberGeneration::test_generate_asset_number PASSED [  2%]
+tests/test_assets.py::TestAssetsAPI::test_create_asset_success ERROR     [  4%]
+tests/test_assets.py::TestAssetsAPI::test_create_asset_with_storage_start_date ERROR [  6%]
+tests/test_assets.py::TestAssetsAPI::test_create_asset_missing_fields PASSED [  8%]
+tests/test_assets.py::TestAssetsAPI::test_create_asset_invalid_category ERROR [ 10%]
+tests/test_assets.py::TestAssetsAPI::test_list_assets_success ERROR      [ 13%]
+tests/test_assets.py::TestAssetsAPI::test_list_assets_filter_by_application ERROR [ 15%]
+tests/test_auth.py::TestAuth::test_generate_token PASSED                 [ 17%]
+tests/test_auth.py::TestAuth::test_verify_token_success PASSED           [ 19%]
+tests/test_auth.py::TestAuth::test_verify_token_missing PASSED           [ 21%]
+tests/test_auth.py::TestAuth::test_verify_token_invalid PASSED           [ 23%]
+tests/test_auth.py::TestAuth::test_google_auth_missing_token PASSED      [ 26%]
+tests/test_auth.py::TestAuth::test_get_current_user_success PASSED       [ 28%]
+tests/test_auth.py::TestAuth::test_get_current_user_no_token PASSED      [ 30%]
+tests/test_disposal.py::TestDisposalAPI::test_request_disposal_success ERROR [ 32%]
+tests/test_disposal.py::TestDisposalAPI::test_request_disposal_missing_asset_id PASSED [ 34%]
+tests/test_disposal.py::TestDisposalAPI::test_list_disposals_success ERROR [ 36%]
+tests/test_disposal.py::TestDisposalAPI::test_cancel_disposal_success ERROR [ 39%]
+tests/test_disposal.py::TestDisposalAPI::test_cancel_disposal_invalid_status ERROR [ 41%]
+tests/test_retrieval.py::TestRetrievalAPI::test_request_retrieval_success ERROR [ 43%]
+tests/test_retrieval.py::TestRetrievalAPI::test_request_retrieval_missing_asset_id PASSED [ 45%]
+tests/test_retrieval.py::TestRetrievalAPI::test_list_retrievals_success ERROR [ 47%]
+tests/test_retrieval.py::TestRetrievalAPI::test_cancel_retrieval_success ERROR [ 50%]
+tests/test_retrieval.py::TestRetrievalAPI::test_cancel_retrieval_invalid_status ERROR [ 52%]
+tests/test_security.py::TestSecurity::test_jwt_token_validation PASSED   [ 54%]
+tests/test_security.py::TestSecurity::test_unauthorized_access_prevention PASSED [ 56%]
+tests/test_security.py::TestSecurity::test_user_data_isolation FAILED    [ 58%]
+tests/test_storage.py::TestStoragePriceCalculation::test_calculate_price_space_1_month PASSED [ 60%]
+tests/test_storage.py::TestStoragePriceCalculation::test_calculate_price_space_3_months PASSED [ 63%]
+tests/test_storage.py::TestStoragePriceCalculation::test_calculate_price_space_6_months PASSED [ 65%]
+tests/test_storage.py::TestStoragePriceCalculation::test_calculate_price_space_10_pyeong PASSED [ 67%]
+tests/test_storage.py::TestStoragePriceCalculation::test_calculate_price_space_3_months_10_pyeong PASSED [ 69%]
+tests/test_storage.py::TestStoragePriceCalculation::test_calculate_price_space_6_months_10_pyeong PASSED [ 71%]
+tests/test_storage.py::TestStoragePriceCalculation::test_calculate_price_box_1_month PASSED [ 73%]
+tests/test_storage.py::TestStoragePriceCalculation::test_calculate_price_box_3_months PASSED [ 76%]
+tests/test_storage.py::TestStoragePriceCalculation::test_calculate_price_box_6_months PASSED [ 78%]
+tests/test_storage.py::TestStoragePriceCalculation::test_calculate_price_box_multiple PASSED [ 80%]
+tests/test_storage.py::TestStorageAPI::test_estimate_space_success PASSED [ 82%]
+tests/test_storage.py::TestStorageAPI::test_estimate_box_success PASSED  [ 84%]
+tests/test_storage.py::TestStorageAPI::test_estimate_missing_fields PASSED [ 86%]
+tests/test_storage.py::TestStorageAPI::test_estimate_invalid_months PASSED [ 89%]
+tests/test_storage.py::TestStorageAPI::test_estimate_space_zero_pyeong PASSED [ 91%]
+tests/test_storage.py::TestStorageAPI::test_apply_storage_success FAILED [ 93%]
+tests/test_storage.py::TestStorageAPI::test_apply_storage_unauthorized PASSED [ 95%]
+tests/test_storage.py::TestStorageAPI::test_list_applications_success ERROR [ 97%]
+tests/test_storage.py::TestStorageAPI::test_get_application_success ERROR [100%]
+
+==================================== ERRORS ====================================
+__________ ERROR at setup of TestAssetsAPI.test_create_asset_success ___________
+E   psycopg2.errors.InvalidTextRepresentation: invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+
+The above exception was the direct cause of the following exception:
+E   sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+    
+    [SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+    [parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 10, 794284), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 10, 794289)}]
+    (Background on this error at: https://sqlalche.me/e/20/9h9h)
+__ ERROR at setup of TestAssetsAPI.test_create_asset_with_storage_start_date ___
+E   psycopg2.errors.InvalidTextRepresentation: invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+
+The above exception was the direct cause of the following exception:
+E   sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+    
+    [SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+    [parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 11, 97201), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 11, 97206)}]
+    (Background on this error at: https://sqlalche.me/e/20/9h9h)
+______ ERROR at setup of TestAssetsAPI.test_create_asset_invalid_category ______
+E   psycopg2.errors.InvalidTextRepresentation: invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+
+The above exception was the direct cause of the following exception:
+E   sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+    
+    [SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+    [parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 11, 618150), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 11, 618155)}]
+    (Background on this error at: https://sqlalche.me/e/20/9h9h)
+___________ ERROR at setup of TestAssetsAPI.test_list_assets_success ___________
+E   psycopg2.errors.InvalidTextRepresentation: invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+
+The above exception was the direct cause of the following exception:
+E   sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+    
+    [SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+    [parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 11, 914336), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 11, 914341)}]
+    (Background on this error at: https://sqlalche.me/e/20/9h9h)
+____ ERROR at setup of TestAssetsAPI.test_list_assets_filter_by_application ____
+E   psycopg2.errors.InvalidTextRepresentation: invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+
+The above exception was the direct cause of the following exception:
+E   sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+    
+    [SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+    [parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 12, 220841), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 12, 220851)}]
+    (Background on this error at: https://sqlalche.me/e/20/9h9h)
+_______ ERROR at setup of TestDisposalAPI.test_request_disposal_success ________
+E   psycopg2.errors.InvalidTextRepresentation: invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+
+The above exception was the direct cause of the following exception:
+E   sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+    
+    [SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+    [parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 13, 260449), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 13, 260459)}]
+    (Background on this error at: https://sqlalche.me/e/20/9h9h)
+________ ERROR at setup of TestDisposalAPI.test_list_disposals_success _________
+E   psycopg2.errors.InvalidTextRepresentation: invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+
+The above exception was the direct cause of the following exception:
+E   sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+    
+    [SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+    [parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 13, 811075), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 13, 811085)}]
+    (Background on this error at: https://sqlalche.me/e/20/9h9h)
+________ ERROR at setup of TestDisposalAPI.test_cancel_disposal_success ________
+E   psycopg2.errors.InvalidTextRepresentation: invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+
+The above exception was the direct cause of the following exception:
+E   sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+    
+    [SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+    [parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 14, 114089), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 14, 114099)}]
+    (Background on this error at: https://sqlalche.me/e/20/9h9h)
+____ ERROR at setup of TestDisposalAPI.test_cancel_disposal_invalid_status _____
+E   psycopg2.errors.InvalidTextRepresentation: invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+
+The above exception was the direct cause of the following exception:
+E   sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+    
+    [SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+    [parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 14, 417695), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 14, 417705)}]
+    (Background on this error at: https://sqlalche.me/e/20/9h9h)
+______ ERROR at setup of TestRetrievalAPI.test_request_retrieval_success _______
+E   psycopg2.errors.InvalidTextRepresentation: invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+
+The above exception was the direct cause of the following exception:
+E   sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+    
+    [SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+    [parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 14, 714591), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 14, 714600)}]
+    (Background on this error at: https://sqlalche.me/e/20/9h9h)
+_______ ERROR at setup of TestRetrievalAPI.test_list_retrievals_success ________
+E   psycopg2.errors.InvalidTextRepresentation: invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+
+The above exception was the direct cause of the following exception:
+E   sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+    
+    [SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+    [parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 15, 246606), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 15, 246828)}]
+    (Background on this error at: https://sqlalche.me/e/20/9h9h)
+_______ ERROR at setup of TestRetrievalAPI.test_cancel_retrieval_success _______
+E   psycopg2.errors.InvalidTextRepresentation: invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+
+The above exception was the direct cause of the following exception:
+E   sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+    
+    [SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+    [parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 15, 547828), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 15, 547838)}]
+    (Background on this error at: https://sqlalche.me/e/20/9h9h)
+___ ERROR at setup of TestRetrievalAPI.test_cancel_retrieval_invalid_status ____
+E   psycopg2.errors.InvalidTextRepresentation: invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+
+The above exception was the direct cause of the following exception:
+E   sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+    
+    [SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+    [parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 15, 875953), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 15, 875962)}]
+    (Background on this error at: https://sqlalche.me/e/20/9h9h)
+_______ ERROR at setup of TestStorageAPI.test_list_applications_success ________
+E   psycopg2.errors.InvalidTextRepresentation: invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+
+The above exception was the direct cause of the following exception:
+E   sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+    
+    [SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+    [parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 16, 989877), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 16, 989887)}]
+    (Background on this error at: https://sqlalche.me/e/20/9h9h)
+________ ERROR at setup of TestStorageAPI.test_get_application_success _________
+E   psycopg2.errors.InvalidTextRepresentation: invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+
+The above exception was the direct cause of the following exception:
+E   sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                                 ^
+    
+    [SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+    [parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 17, 279043), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 17, 279053)}]
+    (Background on this error at: https://sqlalche.me/e/20/9h9h)
+=================================== FAILURES ===================================
+E   psycopg2.errors.InvalidTextRepresentation: invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (4, 'SPACE', 5...
+                                                                 ^
+
+The above exception was the direct cause of the following exception:
+E   sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+    LINE 1: ...price, status, created_at, updated_at) VALUES (4, 'SPACE', 5...
+                                                                 ^
+    
+    [SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+    [parameters: {'user_id': 4, 'storage_type': 'SPACE', 'space_pyeong': 5, 'box_count': None, 'months': 1, 'estimated_price': 300000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 16, 414944), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 16, 414953)}]
+    (Background on this error at: https://sqlalche.me/e/20/9h9h)
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/default.py:951: sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+E   assert 500 == 201
+     +  where 500 = <WrapperTestResponse streamed [500 INTERNAL SERVER ERROR]>.status_code
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_storage.py:128: assert 500 == 201
+=========================== short test summary info ============================
+FAILED tests/test_security.py::TestSecurity::test_user_data_isolation - sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+LINE 1: ...price, status, created_at, updated_at) VALUES (4, 'SPACE', 5...
+                                                             ^
+
+[SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+[parameters: {'user_id': 4, 'storage_type': 'SPACE', 'space_pyeong': 5, 'box_count': None, 'months': 1, 'estimated_price': 300000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 16, 414944), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 16, 414953)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+FAILED tests/test_storage.py::TestStorageAPI::test_apply_storage_success - assert 500 == 201
+ +  where 500 = <WrapperTestResponse streamed [500 INTERNAL SERVER ERROR]>.status_code
+ERROR tests/test_assets.py::TestAssetsAPI::test_create_asset_success - sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                             ^
+
+[SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+[parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 10, 794284), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 10, 794289)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+ERROR tests/test_assets.py::TestAssetsAPI::test_create_asset_with_storage_start_date - sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                             ^
+
+[SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+[parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 11, 97201), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 11, 97206)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+ERROR tests/test_assets.py::TestAssetsAPI::test_create_asset_invalid_category - sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                             ^
+
+[SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+[parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 11, 618150), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 11, 618155)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+ERROR tests/test_assets.py::TestAssetsAPI::test_list_assets_success - sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                             ^
+
+[SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+[parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 11, 914336), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 11, 914341)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+ERROR tests/test_assets.py::TestAssetsAPI::test_list_assets_filter_by_application - sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                             ^
+
+[SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+[parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 12, 220841), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 12, 220851)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+ERROR tests/test_disposal.py::TestDisposalAPI::test_request_disposal_success - sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                             ^
+
+[SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+[parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 13, 260449), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 13, 260459)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+ERROR tests/test_disposal.py::TestDisposalAPI::test_list_disposals_success - sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                             ^
+
+[SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+[parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 13, 811075), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 13, 811085)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+ERROR tests/test_disposal.py::TestDisposalAPI::test_cancel_disposal_success - sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                             ^
+
+[SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+[parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 14, 114089), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 14, 114099)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+ERROR tests/test_disposal.py::TestDisposalAPI::test_cancel_disposal_invalid_status - sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                             ^
+
+[SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+[parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 14, 417695), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 14, 417705)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+ERROR tests/test_retrieval.py::TestRetrievalAPI::test_request_retrieval_success - sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                             ^
+
+[SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+[parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 14, 714591), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 14, 714600)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+ERROR tests/test_retrieval.py::TestRetrievalAPI::test_list_retrievals_success - sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                             ^
+
+[SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+[parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 15, 246606), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 15, 246828)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+ERROR tests/test_retrieval.py::TestRetrievalAPI::test_cancel_retrieval_success - sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                             ^
+
+[SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+[parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 15, 547828), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 15, 547838)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+ERROR tests/test_retrieval.py::TestRetrievalAPI::test_cancel_retrieval_invalid_status - sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                             ^
+
+[SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+[parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 15, 875953), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 15, 875962)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+ERROR tests/test_storage.py::TestStorageAPI::test_list_applications_success - sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                             ^
+
+[SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+[parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 16, 989877), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 16, 989887)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+ERROR tests/test_storage.py::TestStorageAPI::test_get_application_success - sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input value for enum storage_type_enum: "SPACE"
+LINE 1: ...price, status, created_at, updated_at) VALUES (3, 'SPACE', 1...
+                                                             ^
+
+[SQL: INSERT INTO storage_applications (user_id, storage_type, space_pyeong, box_count, months, estimated_price, status, created_at, updated_at) VALUES (%(user_id)s, %(storage_type)s, %(space_pyeong)s, %(box_count)s, %(months)s, %(estimated_price)s, %(status)s, %(created_at)s, %(updated_at)s) RETURNING storage_applications.id]
+[parameters: {'user_id': 3, 'storage_type': 'SPACE', 'space_pyeong': 10, 'box_count': None, 'months': 3, 'estimated_price': 1600000, 'status': 'APPROVED', 'created_at': datetime.datetime(2025, 11, 28, 6, 7, 17, 279043), 'updated_at': datetime.datetime(2025, 11, 28, 6, 7, 17, 279053)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+============= 2 failed, 29 passed, 65 warnings, 15 errors in 7.32s =============

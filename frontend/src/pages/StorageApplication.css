@@ -1,0 +1,74 @@
+.storage-application-page {
+  min-height: calc(100vh - 200px);
+  padding: 60px 0 40px;
+}
+
+.storage-application-page .container {
+  max-width: 1200px;
+}
+
+.storage-application-page h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.storage-application-page .card h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+}
+
+.storage-type-selector {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.estimate-result {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.estimate-result h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: bold;
+  color: #007bff;
+  margin: 20px 0;
+}
+
+.form-actions {
+  margin-top: 20px;
+}
+
+.storage-application-page .error {
+  margin-top: 20px;
+}
+
+.storage-application-page .success {
+  margin-top: 20px;
+}
+

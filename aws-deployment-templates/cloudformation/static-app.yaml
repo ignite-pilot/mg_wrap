@@ -1,0 +1,385 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Static Web Application Infrastructure - S3 + CloudFront + Route53"
+
+################################################################################
+# PARAMETERS
+################################################################################
+
+Parameters:
+  DeploymentPhase:
+    Type: String
+    AllowedValues: [alpha, beta, production]
+    Description: "Deployment phase"
+
+  ApplicationName:
+    Type: String
+    Description: "Application name (lowercase, alphanumeric + hyphens)"
+
+  # Domain Configuration
+  RootDomain:
+    Type: String
+    Default: "ig-pilot.com"
+    Description: "Root domain name"
+
+  CreateHostedZone:
+    Type: String
+    Default: "false"
+    AllowedValues: ["true", "false"]
+    Description: "Create new Route53 Hosted Zone"
+
+  HostedZoneId:
+    Type: String
+    Default: ""
+    Description: "Existing Route53 Hosted Zone ID (required if CreateHostedZone=false)"
+
+  # CloudFront Configuration
+  PriceClass:
+    Type: String
+    Default: "PriceClass_100"
+    AllowedValues: ["PriceClass_100", "PriceClass_200", "PriceClass_All"]
+    Description: "CloudFront price class"
+
+  DefaultTTL:
+    Type: Number
+    Default: 86400
+    Description: "Default cache TTL in seconds"
+
+  MaxTTL:
+    Type: Number
+    Default: 31536000
+    Description: "Maximum cache TTL in seconds"
+
+  IndexDocument:
+    Type: String
+    Default: "index.html"
+    Description: "Index document"
+
+  ErrorDocument:
+    Type: String
+    Default: "404.html"
+    Description: "Error document"
+
+  # VPN Access Configuration
+  VpnCidr:
+    Type: String
+    Default: "10.255.0.0/16"
+    Description: "VPN CIDR block (for alpha/beta access restriction)"
+
+################################################################################
+# CONDITIONS
+################################################################################
+
+Conditions:
+  IsProduction: !Equals [!Ref DeploymentPhase, production]
+  IsVPNRestricted: !Or
+    - !Equals [!Ref DeploymentPhase, alpha]
+    - !Equals [!Ref DeploymentPhase, beta]
+  ShouldCreateHostedZone: !Equals [!Ref CreateHostedZone, "true"]
+
+################################################################################
+# RESOURCES
+################################################################################
+
+Resources:
+  # ==========================================================================
+  # SECTION 1: S3 Bucket for Static Content
+  # ==========================================================================
+
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "${DeploymentPhase}-${ApplicationName}-static-content"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      VersioningConfiguration:
+        Status: Enabled
+      LifecycleConfiguration:
+        Rules:
+          - Id: DeleteOldVersions
+            Status: Enabled
+            NoncurrentVersionExpirationInDays: 30
+      Tags:
+        - Key: Name
+          Value: !Sub "${DeploymentPhase}-${ApplicationName}-static-content"
+        - Key: DeploymentPhase
+          Value: !Ref DeploymentPhase
+        - Key: Application
+          Value: !Ref ApplicationName
+
+  # S3 Bucket Policy for CloudFront
+  S3BucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref S3Bucket
+      PolicyDocument:
+        Statement:
+          - Sid: AllowCloudFrontOAI
+            Effect: Allow
+            Principal:
+              Service: cloudfront.amazonaws.com
+            Action: s3:GetObject
+            Resource: !Sub "${S3Bucket.Arn}/*"
+            Condition:
+              StringEquals:
+                AWS:SourceArn: !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/${CloudFrontDistribution}"
+
+  # ==========================================================================
+  # SECTION 2: Route53 Hosted Zone (Optional)
+  # ==========================================================================
+
+  HostedZone:
+    Type: AWS::Route53::HostedZone
+    Condition: ShouldCreateHostedZone
+    Properties:
+      Name: !Ref RootDomain
+      HostedZoneConfig:
+        Comment: !Sub "Hosted zone for ${RootDomain}"
+
+  # ==========================================================================
+  # SECTION 3: ACM Certificate
+  # ==========================================================================
+
+  ACMCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: !Sub "*.${ApplicationName}.${RootDomain}"
+      SubjectAlternativeNames:
+        - !Sub "${ApplicationName}.${RootDomain}"
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: !Sub "*.${ApplicationName}.${RootDomain}"
+          HostedZoneId: !If
+            - ShouldCreateHostedZone
+            - !Ref HostedZone
+            - !Ref HostedZoneId
+      Tags:
+        - Key: Name
+          Value: !Sub "${ApplicationName}-wildcard-cert"
+        - Key: DeploymentPhase
+          Value: !Ref DeploymentPhase
+        - Key: Application
+          Value: !Ref ApplicationName
+
+  # ==========================================================================
+  # SECTION 4: CloudFront Distribution
+  # ==========================================================================
+
+  CloudFrontOriginAccessControl:
+    Type: AWS::CloudFront::OriginAccessControl
+    Properties:
+      OriginAccessControlConfig:
+        Name: !Sub "${DeploymentPhase}-${ApplicationName}-oac"
+        OriginAccessControlOriginType: s3
+        SigningBehavior: always
+        SigningProtocol: sigv4
+
+  CloudFrontDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Comment: !Sub "${DeploymentPhase} - ${ApplicationName}"
+        DefaultRootObject: !Ref IndexDocument
+        PriceClass: !Ref PriceClass
+
+        # Domain Configuration
+        Aliases:
+          - !If
+            - IsProduction
+            - !Sub "${ApplicationName}.${RootDomain}"
+            - !Sub "${DeploymentPhase}.${ApplicationName}.${RootDomain}"
+
+        ViewerCertificate:
+          AcmCertificateArn: !Ref ACMCertificate
+          SslSupportMethod: sni-only
+          MinimumProtocolVersion: TLSv1.2_2021
+
+        # Origins
+        Origins:
+          - Id: S3Origin
+            DomainName: !GetAtt S3Bucket.RegionalDomainName
+            OriginAccessControlId: !Ref CloudFrontOriginAccessControl
+            S3OriginConfig: {}
+
+        # Default Cache Behavior
+        DefaultCacheBehavior:
+          TargetOriginId: S3Origin
+          ViewerProtocolPolicy: redirect-to-https
+          AllowedMethods: [GET, HEAD, OPTIONS]
+          CachedMethods: [GET, HEAD, OPTIONS]
+          Compress: true
+          DefaultTTL: !Ref DefaultTTL
+          MaxTTL: !Ref MaxTTL
+          MinTTL: 0
+          ForwardedValues:
+            QueryString: false
+            Cookies:
+              Forward: none
+
+        # Custom Error Responses
+        CustomErrorResponses:
+          - ErrorCode: 404
+            ResponseCode: 404
+            ResponsePagePath: !Sub "/${ErrorDocument}"
+            ErrorCachingMinTTL: 300
+          - ErrorCode: 403
+            ResponseCode: 404
+            ResponsePagePath: !Sub "/${ErrorDocument}"
+            ErrorCachingMinTTL: 300
+
+        # Geo Restriction (VPN-only for alpha/beta)
+        Restrictions:
+          GeoRestriction:
+            RestrictionType: !If [IsProduction, "none", "none"]
+            # Note: CloudFront doesn't support IP-based restrictions natively
+            # For VPN-only access, use AWS WAF (see below)
+
+      Tags:
+        - Key: Name
+          Value: !Sub "${DeploymentPhase}-${ApplicationName}-distribution"
+        - Key: DeploymentPhase
+          Value: !Ref DeploymentPhase
+        - Key: Application
+          Value: !Ref ApplicationName
+
+  # ==========================================================================
+  # SECTION 5: AWS WAF for VPN-Only Access (Alpha/Beta)
+  # ==========================================================================
+
+  WebACL:
+    Type: AWS::WAFv2::WebACL
+    Condition: IsVPNRestricted
+    Properties:
+      Name: !Sub "${DeploymentPhase}-${ApplicationName}-waf"
+      Scope: CLOUDFRONT
+      DefaultAction:
+        Block: {}
+      Rules:
+        # Allow VPN CIDR
+        - Name: AllowVPN
+          Priority: 1
+          Statement:
+            IPSetReferenceStatement:
+              Arn: !GetAtt VPNIPSet.Arn
+          Action:
+            Allow: {}
+          VisibilityConfig:
+            SampledRequestsEnabled: true
+            CloudWatchMetricsEnabled: true
+            MetricName: AllowVPNRule
+      VisibilityConfig:
+        SampledRequestsEnabled: true
+        CloudWatchMetricsEnabled: true
+        MetricName: !Sub "${DeploymentPhase}-${ApplicationName}-waf"
+      Tags:
+        - Key: Name
+          Value: !Sub "${DeploymentPhase}-${ApplicationName}-waf"
+        - Key: DeploymentPhase
+          Value: !Ref DeploymentPhase
+
+  VPNIPSet:
+    Type: AWS::WAFv2::IPSet
+    Condition: IsVPNRestricted
+    Properties:
+      Name: !Sub "${DeploymentPhase}-${ApplicationName}-vpn-ips"
+      Scope: CLOUDFRONT
+      IPAddressVersion: IPV4
+      Addresses:
+        - !Ref VpnCidr
+      Tags:
+        - Key: Name
+          Value: !Sub "${DeploymentPhase}-${ApplicationName}-vpn-ips"
+
+  WebACLAssociation:
+    Type: AWS::WAFv2::WebACLAssociation
+    Condition: IsVPNRestricted
+    Properties:
+      ResourceArn: !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/${CloudFrontDistribution}"
+      WebACLArn: !GetAtt WebACL.Arn
+
+  # ==========================================================================
+  # SECTION 6: Route53 DNS Record
+  # ==========================================================================
+
+  DNSRecord:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneId: !If
+        - ShouldCreateHostedZone
+        - !Ref HostedZone
+        - !Ref HostedZoneId
+      Name: !If
+        - IsProduction
+        - !Sub "${ApplicationName}.${RootDomain}"
+        - !Sub "${DeploymentPhase}.${ApplicationName}.${RootDomain}"
+      Type: A
+      AliasTarget:
+        DNSName: !GetAtt CloudFrontDistribution.DomainName
+        HostedZoneId: Z2FDTNDATAQYW2  # CloudFront Hosted Zone ID (constant)
+        EvaluateTargetHealth: false
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+Outputs:
+  S3BucketName:
+    Description: "S3 Bucket Name"
+    Value: !Ref S3Bucket
+    Export:
+      Name: !Sub "${AWS::StackName}-S3BucketName"
+
+  CloudFrontDistributionId:
+    Description: "CloudFront Distribution ID"
+    Value: !Ref CloudFrontDistribution
+    Export:
+      Name: !Sub "${AWS::StackName}-CloudFrontDistributionId"
+
+  CloudFrontDomainName:
+    Description: "CloudFront Domain Name"
+    Value: !GetAtt CloudFrontDistribution.DomainName
+    Export:
+      Name: !Sub "${AWS::StackName}-CloudFrontDomainName"
+
+  ApplicationDomain:
+    Description: "Application Domain Name"
+    Value: !If
+      - IsProduction
+      - !Sub "${ApplicationName}.${RootDomain}"
+      - !Sub "${DeploymentPhase}.${ApplicationName}.${RootDomain}"
+    Export:
+      Name: !Sub "${AWS::StackName}-ApplicationDomain"
+
+  ApplicationURL:
+    Description: "Application URL"
+    Value: !If
+      - IsProduction
+      - !Sub "https://${ApplicationName}.${RootDomain}"
+      - !Sub "https://${DeploymentPhase}.${ApplicationName}.${RootDomain}"
+    Export:
+      Name: !Sub "${AWS::StackName}-ApplicationURL"
+
+  CertificateArn:
+    Description: "ACM Certificate ARN"
+    Value: !Ref ACMCertificate
+    Export:
+      Name: !Sub "${AWS::StackName}-CertificateArn"
+
+  HostedZoneId:
+    Condition: ShouldCreateHostedZone
+    Description: "Route53 Hosted Zone ID"
+    Value: !Ref HostedZone
+    Export:
+      Name: !Sub "${AWS::StackName}-HostedZoneId"
+
+  HostedZoneNameServers:
+    Condition: ShouldCreateHostedZone
+    Description: "Name servers for the hosted zone"
+    Value: !Join [", ", !GetAtt HostedZone.NameServers]

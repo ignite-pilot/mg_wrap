@@ -1,0 +1,770 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Full-Stack Application Infrastructure - ECS Fargate + RDS + ALB + Route53"
+
+################################################################################
+# PARAMETERS
+################################################################################
+
+Parameters:
+  DeploymentPhase:
+    Type: String
+    AllowedValues: [alpha, beta, production]
+    Description: "Deployment phase"
+
+  ApplicationName:
+    Type: String
+    Description: "Application name (lowercase, alphanumeric + hyphens)"
+
+  # VPC and Network Configuration
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: "VPC ID"
+
+  VpcCidr:
+    Type: String
+    Default: "10.0.0.0/16"
+    Description: "VPC CIDR block for internal access"
+
+  VpnCidr:
+    Type: String
+    Default: "10.255.0.0/16"
+    Description: "VPN CIDR block for VPN client access"
+
+  PublicSubnetIds:
+    Type: List<AWS::EC2::Subnet::Id>
+    Description: "Public subnets for ALB"
+
+  PrivateSubnetIds:
+    Type: List<AWS::EC2::Subnet::Id>
+    Description: "Private subnets for ECS Tasks and RDS"
+
+  # Database Configuration
+  DatabaseEnabled:
+    Type: String
+    Default: "true"
+    AllowedValues: ["true", "false"]
+    Description: "Enable RDS database"
+
+  DatabaseEngine:
+    Type: String
+    Default: "postgres"
+    AllowedValues: ["postgres", "mysql"]
+    Description: "Database engine"
+
+  DBUsername:
+    Type: String
+    Default: "app_admin"
+    Description: "Database master username"
+
+  DBPassword:
+    Type: String
+    NoEcho: true
+    Description: "Database master password (min 8 characters)"
+    MinLength: 8
+
+  DBName:
+    Type: String
+    Default: "app_db"
+    Description: "Database name"
+
+  # Application Configuration
+  ContainerPort:
+    Type: Number
+    Default: 5000
+    Description: "Container port"
+
+  HealthCheckPath:
+    Type: String
+    Default: /api/health
+    Description: "Health check path"
+
+  # Domain Configuration
+  RootDomain:
+    Type: String
+    Default: "ig-pilot.com"
+    Description: "Root domain name"
+
+  CreateHostedZone:
+    Type: String
+    Default: "false"
+    AllowedValues: ["true", "false"]
+    Description: "Create new Route53 Hosted Zone"
+
+  HostedZoneId:
+    Type: String
+    Default: ""
+    Description: "Existing Route53 Hosted Zone ID (required if CreateHostedZone=false)"
+
+  # Optional Environment Variables (as JSON string)
+  EnvironmentVariables:
+    Type: String
+    Default: "{}"
+    Description: "Additional environment variables as JSON (e.g., {\"KEY1\":\"value1\",\"KEY2\":\"value2\"})"
+
+  # Resource Sizing (optional - will use defaults from Mappings if not specified)
+  RDSInstanceClass:
+    Type: String
+    Default: ""
+    Description: "RDS instance class (leave empty for auto-selection)"
+
+  RDSAllocatedStorage:
+    Type: Number
+    Default: 0
+    Description: "RDS storage in GB (0 for auto-selection)"
+
+  ECSCpu:
+    Type: Number
+    Default: 0
+    Description: "ECS CPU units (0 for auto-selection)"
+
+  ECSMemory:
+    Type: Number
+    Default: 0
+    Description: "ECS memory in MB (0 for auto-selection)"
+
+  ECSDesiredCount:
+    Type: Number
+    Default: 0
+    Description: "Desired number of ECS tasks (0 for auto-selection)"
+
+################################################################################
+# CONDITIONS
+################################################################################
+
+Conditions:
+  IsProduction: !Equals [!Ref DeploymentPhase, production]
+  IsVPNRestricted: !Or
+    - !Equals [!Ref DeploymentPhase, alpha]
+    - !Equals [!Ref DeploymentPhase, beta]
+  ShouldCreateHostedZone: !Equals [!Ref CreateHostedZone, "true"]
+  HasDatabaseEnabled: !Equals [!Ref DatabaseEnabled, "true"]
+  IsPostgres: !Equals [!Ref DatabaseEngine, "postgres"]
+  UseDefaultRDSInstanceClass: !Equals [!Ref RDSInstanceClass, ""]
+  UseDefaultRDSStorage: !Equals [!Ref RDSAllocatedStorage, 0]
+  UseDefaultECSCpu: !Equals [!Ref ECSCpu, 0]
+  UseDefaultECSMemory: !Equals [!Ref ECSMemory, 0]
+  UseDefaultECSDesiredCount: !Equals [!Ref ECSDesiredCount, 0]
+
+################################################################################
+# MAPPINGS
+################################################################################
+
+Mappings:
+  EnvironmentConfig:
+    alpha:
+      # RDS
+      DBInstanceClass: db.t3.micro
+      DBAllocatedStorage: 20
+      # ECS
+      CapacityProvider: FARGATE_SPOT
+      Memory: 2048
+      Cpu: 1024
+      DesiredCount: 1
+    beta:
+      # RDS
+      DBInstanceClass: db.t3.micro
+      DBAllocatedStorage: 20
+      # ECS
+      CapacityProvider: FARGATE_SPOT
+      Memory: 2048
+      Cpu: 1024
+      DesiredCount: 1
+    production:
+      # RDS
+      DBInstanceClass: db.t3.small
+      DBAllocatedStorage: 50
+      # ECS
+      CapacityProvider: FARGATE
+      Memory: 4096
+      Cpu: 2048
+      DesiredCount: 2
+
+  DatabaseConfig:
+    postgres:
+      Engine: postgres
+      EngineVersion: "15.15"
+      Port: 5432
+      Family: postgres15
+    mysql:
+      Engine: mysql
+      EngineVersion: "8.0.35"
+      Port: 3306
+      Family: mysql8.0
+
+################################################################################
+# RESOURCES
+################################################################################
+
+Resources:
+  # ==========================================================================
+  # SECTION 1: Security Groups
+  # ==========================================================================
+
+  # ALB Security Group
+  ALBSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: !Sub "${DeploymentPhase}-${ApplicationName}-alb-sg"
+      GroupDescription: "Security group for Application Load Balancer"
+      VpcId: !Ref VpcId
+      SecurityGroupEgress:
+        - CidrIp: "0.0.0.0/0"
+          IpProtocol: "-1"
+      Tags:
+        - Key: Name
+          Value: !Sub "${DeploymentPhase}-${ApplicationName}-alb-sg"
+        - Key: DeploymentPhase
+          Value: !Ref DeploymentPhase
+        - Key: Application
+          Value: !Ref ApplicationName
+        - Key: AccessType
+          Value: !If [IsVPNRestricted, "VPN-Only", "Public"]
+
+  # ALB Security Group Ingress - HTTP from VPC (for VPN-restricted environments)
+  ALBSecurityGroupIngressHTTPVpc:
+    Type: AWS::EC2::SecurityGroupIngress
+    Condition: IsVPNRestricted
+    Properties:
+      GroupId: !Ref ALBSecurityGroup
+      IpProtocol: tcp
+      FromPort: 80
+      ToPort: 80
+      CidrIp: !Ref VpcCidr
+      Description: "HTTP from VPC"
+
+  # ALB Security Group Ingress - HTTPS from VPC (for VPN-restricted environments)
+  ALBSecurityGroupIngressHTTPSVpc:
+    Type: AWS::EC2::SecurityGroupIngress
+    Condition: IsVPNRestricted
+    Properties:
+      GroupId: !Ref ALBSecurityGroup
+      IpProtocol: tcp
+      FromPort: 443
+      ToPort: 443
+      CidrIp: !Ref VpcCidr
+      Description: "HTTPS from VPC"
+
+  # ALB Security Group Ingress - HTTP from VPN (for VPN-restricted environments)
+  ALBSecurityGroupIngressHTTPVpn:
+    Type: AWS::EC2::SecurityGroupIngress
+    Condition: IsVPNRestricted
+    Properties:
+      GroupId: !Ref ALBSecurityGroup
+      IpProtocol: tcp
+      FromPort: 80
+      ToPort: 80
+      CidrIp: !Ref VpnCidr
+      Description: "HTTP from VPN"
+
+  # ALB Security Group Ingress - HTTPS from VPN (for VPN-restricted environments)
+  ALBSecurityGroupIngressHTTPSVpn:
+    Type: AWS::EC2::SecurityGroupIngress
+    Condition: IsVPNRestricted
+    Properties:
+      GroupId: !Ref ALBSecurityGroup
+      IpProtocol: tcp
+      FromPort: 443
+      ToPort: 443
+      CidrIp: !Ref VpnCidr
+      Description: "HTTPS from VPN"
+
+  # ALB Security Group Ingress - HTTP from anywhere (for Production)
+  ALBSecurityGroupIngressHTTPPublic:
+    Type: AWS::EC2::SecurityGroupIngress
+    Condition: IsProduction
+    Properties:
+      GroupId: !Ref ALBSecurityGroup
+      IpProtocol: tcp
+      FromPort: 80
+      ToPort: 80
+      CidrIp: "0.0.0.0/0"
+      Description: "HTTP from anywhere"
+
+  # ALB Security Group Ingress - HTTPS from anywhere (for Production)
+  ALBSecurityGroupIngressHTTPSPublic:
+    Type: AWS::EC2::SecurityGroupIngress
+    Condition: IsProduction
+    Properties:
+      GroupId: !Ref ALBSecurityGroup
+      IpProtocol: tcp
+      FromPort: 443
+      ToPort: 443
+      CidrIp: "0.0.0.0/0"
+      Description: "HTTPS from anywhere"
+
+  # ECS Tasks Security Group
+  ECSSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: !Sub "${DeploymentPhase}-${ApplicationName}-ecs-sg"
+      GroupDescription: "Security group for ECS tasks"
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - SourceSecurityGroupId: !Ref ALBSecurityGroup
+          FromPort: !Ref ContainerPort
+          IpProtocol: tcp
+          ToPort: !Ref ContainerPort
+      SecurityGroupEgress:
+        - CidrIp: "0.0.0.0/0"
+          IpProtocol: "-1"
+      Tags:
+        - Key: Name
+          Value: !Sub "${DeploymentPhase}-${ApplicationName}-ecs-sg"
+        - Key: DeploymentPhase
+          Value: !Ref DeploymentPhase
+        - Key: Application
+          Value: !Ref ApplicationName
+
+  # RDS Security Group
+  RDSSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Condition: HasDatabaseEnabled
+    Properties:
+      GroupName: !Sub "${DeploymentPhase}-${ApplicationName}-rds-sg"
+      GroupDescription: "Security group for RDS Database"
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - SourceSecurityGroupId: !Ref ECSSecurityGroup
+          FromPort: !FindInMap [DatabaseConfig, !Ref DatabaseEngine, Port]
+          IpProtocol: tcp
+          ToPort: !FindInMap [DatabaseConfig, !Ref DatabaseEngine, Port]
+      SecurityGroupEgress:
+        - CidrIp: "0.0.0.0/0"
+          IpProtocol: "-1"
+      Tags:
+        - Key: Name
+          Value: !Sub "${DeploymentPhase}-${ApplicationName}-rds-sg"
+        - Key: DeploymentPhase
+          Value: !Ref DeploymentPhase
+        - Key: Application
+          Value: !Ref ApplicationName
+
+  # ==========================================================================
+  # SECTION 2: RDS Database (Optional)
+  # ==========================================================================
+
+  DBSubnetGroup:
+    Type: AWS::RDS::DBSubnetGroup
+    Condition: HasDatabaseEnabled
+    Properties:
+      DBSubnetGroupName: !Sub "${DeploymentPhase}-${ApplicationName}-db-subnet-group"
+      DBSubnetGroupDescription: "Subnet group for RDS Database"
+      SubnetIds: !Ref PrivateSubnetIds
+      Tags:
+        - Key: Name
+          Value: !Sub "${DeploymentPhase}-${ApplicationName}-db-subnet-group"
+        - Key: DeploymentPhase
+          Value: !Ref DeploymentPhase
+        - Key: Application
+          Value: !Ref ApplicationName
+
+  RDSInstance:
+    Type: AWS::RDS::DBInstance
+    Condition: HasDatabaseEnabled
+    DeletionPolicy: Snapshot
+    Properties:
+      DBInstanceIdentifier: !Sub "${DeploymentPhase}-${ApplicationName}-db"
+      Engine: !FindInMap [DatabaseConfig, !Ref DatabaseEngine, Engine]
+      EngineVersion: !FindInMap [DatabaseConfig, !Ref DatabaseEngine, EngineVersion]
+      DBInstanceClass: !If
+        - UseDefaultRDSInstanceClass
+        - !FindInMap [EnvironmentConfig, !Ref DeploymentPhase, DBInstanceClass]
+        - !Ref RDSInstanceClass
+      AllocatedStorage: !If
+        - UseDefaultRDSStorage
+        - !FindInMap [EnvironmentConfig, !Ref DeploymentPhase, DBAllocatedStorage]
+        - !Ref RDSAllocatedStorage
+      StorageType: gp3
+      StorageEncrypted: true
+      MasterUsername: !Ref DBUsername
+      MasterUserPassword: !Ref DBPassword
+      DBName: !Ref DBName
+      DBSubnetGroupName: !Ref DBSubnetGroup
+      VPCSecurityGroups:
+        - !Ref RDSSecurityGroup
+      PubliclyAccessible: false
+      BackupRetentionPeriod: !If [IsProduction, 7, 3]
+      PreferredBackupWindow: "03:00-04:00"
+      PreferredMaintenanceWindow: "mon:04:00-mon:05:00"
+      MultiAZ: !If [IsProduction, true, false]
+      AutoMinorVersionUpgrade: true
+      Tags:
+        - Key: Name
+          Value: !Sub "${DeploymentPhase}-${ApplicationName}-db"
+        - Key: DeploymentPhase
+          Value: !Ref DeploymentPhase
+        - Key: Application
+          Value: !Ref ApplicationName
+
+  # ==========================================================================
+  # SECTION 3: ECR Repository
+  # ==========================================================================
+  # NOTE: ECR Repository는 배포 스크립트에서 미리 생성됩니다.
+  # 이는 Docker 이미지를 CloudFormation 스택 생성 전에 푸시할 수 있도록 하기 위함입니다.
+  # Repository 이름: ${ApplicationName}/${DeploymentPhase}
+
+  # ==========================================================================
+  # SECTION 4: ECS Cluster & CloudWatch Logs
+  # ==========================================================================
+
+  ECSCluster:
+    Type: AWS::ECS::Cluster
+    Properties:
+      ClusterName: !Sub "${DeploymentPhase}-${ApplicationName}-cluster"
+      CapacityProviders:
+        - FARGATE
+        - FARGATE_SPOT
+      DefaultCapacityProviderStrategy:
+        - CapacityProvider: !FindInMap [EnvironmentConfig, !Ref DeploymentPhase, CapacityProvider]
+          Weight: 1
+      Tags:
+        - Key: Name
+          Value: !Sub "${DeploymentPhase}-${ApplicationName}-cluster"
+        - Key: DeploymentPhase
+          Value: !Ref DeploymentPhase
+        - Key: Application
+          Value: !Ref ApplicationName
+
+  LogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "/ecs/${DeploymentPhase}-${ApplicationName}"
+      RetentionInDays: !If [IsProduction, 90, 30]
+
+  # ==========================================================================
+  # SECTION 5: Application Load Balancer
+  # ==========================================================================
+
+  ApplicationLoadBalancer:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Name: !Sub "${DeploymentPhase}-${ApplicationName}-alb"
+      Scheme: internet-facing
+      Type: application
+      Subnets: !Ref PublicSubnetIds
+      SecurityGroups:
+        - !Ref ALBSecurityGroup
+      IpAddressType: ipv4
+      LoadBalancerAttributes:
+        - Key: idle_timeout.timeout_seconds
+          Value: "60"
+        - Key: deletion_protection.enabled
+          Value: "false"
+      Tags:
+        - Key: Name
+          Value: !Sub "${DeploymentPhase}-${ApplicationName}-alb"
+        - Key: DeploymentPhase
+          Value: !Ref DeploymentPhase
+        - Key: Application
+          Value: !Ref ApplicationName
+
+  TargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      Name: !Sub "${DeploymentPhase}-${ApplicationName}-tg"
+      Port: !Ref ContainerPort
+      Protocol: HTTP
+      VpcId: !Ref VpcId
+      TargetType: ip
+      HealthCheckEnabled: true
+      HealthCheckPath: !Ref HealthCheckPath
+      HealthCheckProtocol: HTTP
+      HealthCheckIntervalSeconds: 30
+      HealthCheckTimeoutSeconds: 5
+      HealthyThresholdCount: 2
+      UnhealthyThresholdCount: 3
+      Tags:
+        - Key: Name
+          Value: !Sub "${DeploymentPhase}-${ApplicationName}-tg"
+        - Key: DeploymentPhase
+          Value: !Ref DeploymentPhase
+        - Key: Application
+          Value: !Ref ApplicationName
+
+  # HTTP Listener (redirects to HTTPS)
+  HTTPListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      DefaultActions:
+        - Type: redirect
+          RedirectConfig:
+            Protocol: HTTPS
+            Port: "443"
+            StatusCode: HTTP_301
+      LoadBalancerArn: !Ref ApplicationLoadBalancer
+      Port: 80
+      Protocol: HTTP
+
+  # HTTPS Listener
+  HTTPSListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref TargetGroup
+      LoadBalancerArn: !Ref ApplicationLoadBalancer
+      Port: 443
+      Protocol: HTTPS
+      Certificates:
+        - CertificateArn: !Ref ACMCertificate
+      SslPolicy: ELBSecurityPolicy-TLS13-1-2-2021-06
+
+  # ==========================================================================
+  # SECTION 6: Route53 Hosted Zone
+  # ==========================================================================
+
+  HostedZone:
+    Type: AWS::Route53::HostedZone
+    Condition: ShouldCreateHostedZone
+    Properties:
+      Name: !Ref RootDomain
+      HostedZoneConfig:
+        Comment: !Sub "Hosted zone for ${RootDomain}"
+
+  # ==========================================================================
+  # SECTION 7: ACM Certificate (Wildcard)
+  # ==========================================================================
+
+  ACMCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: !Sub "*.${ApplicationName}.${RootDomain}"
+      SubjectAlternativeNames:
+        - !Sub "${ApplicationName}.${RootDomain}"
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: !Sub "*.${ApplicationName}.${RootDomain}"
+          HostedZoneId: !If
+            - ShouldCreateHostedZone
+            - !Ref HostedZone
+            - !Ref HostedZoneId
+      Tags:
+        - Key: Name
+          Value: !Sub "${ApplicationName}-wildcard-cert"
+        - Key: DeploymentPhase
+          Value: !Ref DeploymentPhase
+        - Key: Application
+          Value: !Ref ApplicationName
+
+  # ==========================================================================
+  # SECTION 8: Route53 DNS Record
+  # ==========================================================================
+
+  DNSRecord:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneId: !If
+        - ShouldCreateHostedZone
+        - !Ref HostedZone
+        - !Ref HostedZoneId
+      Name: !If
+        - IsProduction
+        - !Sub "${ApplicationName}.${RootDomain}"
+        - !Sub "${DeploymentPhase}.${ApplicationName}.${RootDomain}"
+      Type: A
+      AliasTarget:
+        DNSName: !GetAtt ApplicationLoadBalancer.DNSName
+        HostedZoneId: !GetAtt ApplicationLoadBalancer.CanonicalHostedZoneID
+        EvaluateTargetHealth: true
+
+  # ==========================================================================
+  # SECTION 9: ECS Task Definition
+  # ==========================================================================
+
+  ECSTaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: !Sub "${DeploymentPhase}-${ApplicationName}-task"
+      NetworkMode: awsvpc
+      RequiresCompatibilities:
+        - FARGATE
+      Cpu: !If
+        - UseDefaultECSCpu
+        - !FindInMap [EnvironmentConfig, !Ref DeploymentPhase, Cpu]
+        - !Ref ECSCpu
+      Memory: !If
+        - UseDefaultECSMemory
+        - !FindInMap [EnvironmentConfig, !Ref DeploymentPhase, Memory]
+        - !Ref ECSMemory
+      ExecutionRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/ecsTaskExecutionRole"
+      ContainerDefinitions:
+        - Name: !Sub "${DeploymentPhase}-${ApplicationName}-container"
+          Image: !Sub "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/${ApplicationName}/${DeploymentPhase}:latest"
+          Essential: true
+          Memory: !If
+            - UseDefaultECSMemory
+            - !FindInMap [EnvironmentConfig, !Ref DeploymentPhase, Memory]
+            - !Ref ECSMemory
+          PortMappings:
+            - ContainerPort: !Ref ContainerPort
+              Protocol: tcp
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: !Ref LogGroup
+              awslogs-region: !Ref "AWS::Region"
+              awslogs-stream-prefix: ecs
+          Environment: !If
+            - HasDatabaseEnabled
+            - - Name: DEPLOYMENT_PHASE
+                Value: !Ref DeploymentPhase
+              - Name: APPLICATION_NAME
+                Value: !Ref ApplicationName
+              - Name: DB_HOST
+                Value: !GetAtt RDSInstance.Endpoint.Address
+              - Name: DB_PORT
+                Value: !GetAtt RDSInstance.Endpoint.Port
+              - Name: DB_NAME
+                Value: !Ref DBName
+              - Name: DB_USER
+                Value: !Ref DBUsername
+              - Name: DB_PASSWORD
+                Value: !Ref DBPassword
+              - Name: DB_ENGINE
+                Value: !Ref DatabaseEngine
+            - - Name: DEPLOYMENT_PHASE
+                Value: !Ref DeploymentPhase
+              - Name: APPLICATION_NAME
+                Value: !Ref ApplicationName
+      Tags:
+        - Key: Name
+          Value: !Sub "${DeploymentPhase}-${ApplicationName}-task"
+        - Key: DeploymentPhase
+          Value: !Ref DeploymentPhase
+        - Key: Application
+          Value: !Ref ApplicationName
+
+  # ==========================================================================
+  # SECTION 10: ECS Service
+  # ==========================================================================
+
+  ECSService:
+    Type: AWS::ECS::Service
+    DependsOn:
+      - HTTPListener
+    Properties:
+      ServiceName: !Sub "${DeploymentPhase}-${ApplicationName}-service"
+      Cluster: !Ref ECSCluster
+      TaskDefinition: !Ref ECSTaskDefinition
+      DesiredCount: !If
+        - UseDefaultECSDesiredCount
+        - !FindInMap [EnvironmentConfig, !Ref DeploymentPhase, DesiredCount]
+        - !Ref ECSDesiredCount
+      LaunchType: FARGATE
+      PlatformVersion: LATEST
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          AssignPublicIp: DISABLED
+          SecurityGroups:
+            - !Ref ECSSecurityGroup
+          Subnets: !Ref PrivateSubnetIds
+      LoadBalancers:
+        - TargetGroupArn: !Ref TargetGroup
+          ContainerName: !Sub "${DeploymentPhase}-${ApplicationName}-container"
+          ContainerPort: !Ref ContainerPort
+      DeploymentConfiguration:
+        MaximumPercent: 200
+        MinimumHealthyPercent: 0
+        DeploymentCircuitBreaker:
+          Enable: false
+          Rollback: false
+      HealthCheckGracePeriodSeconds: 60
+      Tags:
+        - Key: Name
+          Value: !Sub "${DeploymentPhase}-${ApplicationName}-service"
+        - Key: DeploymentPhase
+          Value: !Ref DeploymentPhase
+        - Key: Application
+          Value: !Ref ApplicationName
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+Outputs:
+  # Route53
+  HostedZoneId:
+    Condition: ShouldCreateHostedZone
+    Description: "Route53 Hosted Zone ID"
+    Value: !Ref HostedZone
+    Export:
+      Name: !Sub "${AWS::StackName}-HostedZoneId"
+
+  HostedZoneNameServers:
+    Condition: ShouldCreateHostedZone
+    Description: "Name servers for the hosted zone"
+    Value: !Join [", ", !GetAtt HostedZone.NameServers]
+
+  # Domain
+  ApplicationDomain:
+    Description: "Application Domain Name"
+    Value: !If
+      - IsProduction
+      - !Sub "${ApplicationName}.${RootDomain}"
+      - !Sub "${DeploymentPhase}.${ApplicationName}.${RootDomain}"
+    Export:
+      Name: !Sub "${AWS::StackName}-ApplicationDomain"
+
+  ApplicationURL:
+    Description: "Application URL"
+    Value: !If
+      - IsProduction
+      - !Sub "https://${ApplicationName}.${RootDomain}"
+      - !Sub "https://${DeploymentPhase}.${ApplicationName}.${RootDomain}"
+    Export:
+      Name: !Sub "${AWS::StackName}-ApplicationURL"
+
+  # Certificate
+  CertificateArn:
+    Description: "ACM Certificate ARN"
+    Value: !Ref ACMCertificate
+    Export:
+      Name: !Sub "${AWS::StackName}-CertificateArn"
+
+  # ECR (managed by separate stack)
+  ECRRepositoryURI:
+    Description: "ECR Repository URI (managed by separate ecr-stack)"
+    Value: !Sub "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/${ApplicationName}/${DeploymentPhase}"
+    Export:
+      Name: !Sub "${AWS::StackName}-ECRRepositoryURI"
+
+  # RDS
+  RDSEndpoint:
+    Condition: HasDatabaseEnabled
+    Description: "RDS Endpoint Address"
+    Value: !GetAtt RDSInstance.Endpoint.Address
+    Export:
+      Name: !Sub "${AWS::StackName}-RDSEndpoint"
+
+  RDSPort:
+    Condition: HasDatabaseEnabled
+    Description: "RDS Endpoint Port"
+    Value: !GetAtt RDSInstance.Endpoint.Port
+    Export:
+      Name: !Sub "${AWS::StackName}-RDSPort"
+
+  # Load Balancer
+  LoadBalancerDNS:
+    Description: "Application Load Balancer DNS Name"
+    Value: !GetAtt ApplicationLoadBalancer.DNSName
+    Export:
+      Name: !Sub "${AWS::StackName}-LoadBalancerDNS"
+
+  LoadBalancerURL:
+    Description: "Application Load Balancer URL"
+    Value: !Sub "http://${ApplicationLoadBalancer.DNSName}"
+    Export:
+      Name: !Sub "${AWS::StackName}-LoadBalancerURL"
+
+  # ECS
+  ClusterName:
+    Description: "ECS Cluster Name"
+    Value: !Ref ECSCluster
+    Export:
+      Name: !Sub "${AWS::StackName}-ClusterName"
+
+  ServiceName:
+    Description: "ECS Service Name"
+    Value: !GetAtt ECSService.Name
+    Export:
+      Name: !Sub "${AWS::StackName}-ServiceName"

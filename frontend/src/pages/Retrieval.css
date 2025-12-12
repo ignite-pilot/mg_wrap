@@ -1,0 +1,17 @@
+.retrieval-page {
+  min-height: calc(100vh - 200px);
+  padding: 60px 0 40px;
+}
+
+.retrieval-page .container {
+  max-width: 1200px;
+}
+
+.retrieval-page h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
