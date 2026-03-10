@@ -44,12 +44,12 @@ COPY --from=frontend-builder /frontend/dist ./frontend/dist
 RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app
 USER appuser
 
-# Expose port
-EXPOSE 5000
+# Expose port (단일 서비스 포트)
+EXPOSE 8400
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=3s --start-period=40s --retries=3 \
-    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:5000/api/health').read()" || exit 1
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8400/api/health').read()" || exit 1
 
 # Run the application
 CMD ["python", "run.py"]

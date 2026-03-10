@@ -43,7 +43,9 @@ python init_db.py
 python run.py
 ```
 
-### 3. Frontend 설정
+### 3. Frontend 빌드
+
+프론트엔드는 Flask가 서빙하므로 빌드가 필요합니다:
 
 ```bash
 cd frontend
@@ -51,14 +53,11 @@ cd frontend
 # 의존성 설치
 npm install
 
-# .env 파일 생성 (선택사항)
-cat > .env << EOF
-VITE_GOOGLE_CLIENT_ID=your_google_client_id_here
-EOF
-
-# 개발 서버 실행
-npm run dev
+# 프론트엔드 빌드 (Flask가 서빙할 파일 생성)
+npm run build
 ```
+
+빌드된 파일은 `frontend/dist`에 생성되며, Flask가 자동으로 서빙합니다.
 
 ## Google OAuth 설정
 
@@ -68,15 +67,14 @@ npm run dev
 4. "사용자 인증 정보 만들기" > "OAuth 클라이언트 ID" 선택
 5. 애플리케이션 유형: "웹 애플리케이션"
 6. 승인된 리디렉션 URI 추가:
-   - `http://localhost:3000`
-   - `http://localhost:5000` (필요시)
+   - `http://localhost:8400` (단일 서비스)
 7. 클라이언트 ID와 클라이언트 시크릿을 복사하여 `.env` 파일에 설정
 
 ## 접속 정보
 
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:5000
-- Database: localhost:3306 (MySQL)
+- 서비스 URL: http://localhost:8400 (Frontend + Backend 통합)
+- API 엔드포인트: http://localhost:8400/api/*
+- Database: AWS RDS PostgreSQL (AWS Secrets Manager에서 관리)
 
 ## 문제 해결
 

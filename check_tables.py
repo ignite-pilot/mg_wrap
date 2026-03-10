@@ -9,8 +9,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from app.utils.aws_secrets import get_postgres_info
 
-# DB 이름은 ig-board로 고정
-DB_NAME = 'ig-board'
+# DB 이름은 mg-wrap로 고정
+DB_NAME = 'mg-wrap'
 
 def check_tables():
     """테이블 목록 확인"""

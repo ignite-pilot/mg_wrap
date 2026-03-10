@@ -53,32 +53,33 @@ pip install -r requirements.txt
 # - CORS_ORIGINS: 허용된 CORS 출처 (기본값: http://localhost:8400)
 ```
 
-### 3. Frontend 설정
+### 3. Frontend 빌드
+
+프론트엔드는 Flask가 서빙하므로 빌드가 필요합니다:
 
 ```bash
 cd frontend
 npm install
-
-# 환경 변수 설정 (선택사항)
-# 프론트엔드에서는 특별한 환경 변수가 필요하지 않습니다.
-# 로그인은 ig-member 서비스를 통해 처리됩니다.
+npm run build
 ```
+
+빌드된 파일은 `frontend/dist`에 생성되며, Flask가 자동으로 서빙합니다.
 
 ### 4. 실행
 
-**Backend 실행:**
+**단일 서비스 실행 (Frontend + Backend 통합):**
 ```bash
+# 프론트엔드 빌드 (최초 1회 또는 변경 시)
+cd frontend
+npm run build
+cd ..
+
+# 서비스 실행
 python run.py
 ```
 
-**Frontend 실행:**
-```bash
-cd frontend
-npm run dev
-```
-
-- Backend: http://localhost:8401
-- Frontend: http://localhost:8400
+- 서비스 URL: http://localhost:8400
+- API 엔드포인트: http://localhost:8400/api/*
 
 ## 필수 서비스
 

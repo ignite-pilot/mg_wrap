@@ -86,3 +86,17 @@ def get_postgres_info() -> Optional[Dict[str, Any]]:
         return secret
     return None
 
+
+def get_mysql_info() -> Optional[Dict[str, Any]]:
+    """
+    AWS Secrets Manager에서 MySQL 연결 정보를 가져옵니다.
+    
+    Returns:
+        MySQL 연결 정보 딕셔너리 (host, port, user, password 등)
+        실패 시 None
+    """
+    secret = get_secret('prod/ignite-pilot/mysql-realpilot')
+    if secret and isinstance(secret, dict):
+        return secret
+    return None
+

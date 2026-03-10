@@ -12,10 +12,12 @@ function Login() {
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    if (user) {
+    // 로그인 페이지에서는 user가 설정되면 홈으로 이동
+    // 하지만 로그인 중일 때는 이동하지 않도록 함
+    if (user && !loading) {
       navigate('/')
     }
-  }, [user, navigate])
+  }, [user, navigate, loading])
 
   // 에러 파라미터 확인 (OAuth2 콜백 실패 시)
   useEffect(() => {
@@ -35,13 +37,30 @@ function Login() {
     try {
       const result = await loginWithEmail(email, password)
       if (result.success) {
-        navigate('/')
+        // 로그인 성공 - user 상태가 업데이트될 때까지 잠시 대기
+        // setUser는 비동기로 상태를 업데이트하므로, 
+        // useEffect가 user 변경을 감지하여 홈으로 이동시킴
+        // 최대 1초 대기 후에도 user가 없으면 에러 표시
+        let attempts = 0
+        const checkUser = setInterval(() => {
+          attempts++
+          if (user) {
+            clearInterval(checkUser)
+            setLoading(false)
+            // user가 설정되었으므로 useEffect가 홈으로 이동시킴
+          } else if (attempts >= 20) {
+            // 2초 후에도 user가 없으면 에러
+            clearInterval(checkUser)
+            setError('로그인은 성공했지만 사용자 정보를 불러오지 못했습니다.')
+            setLoading(false)
+          }
+        }, 100)
       } else {
         setError(result.error || '로그인에 실패했습니다.')
+        setLoading(false)
       }
     } catch (err) {
       setError('로그인 중 오류가 발생했습니다.')
-    } finally {
       setLoading(false)
     }
   }

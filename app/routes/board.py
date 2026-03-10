@@ -5,10 +5,10 @@ import os
 board_bp = Blueprint('board', __name__)
 
 # ig-board API 기본 URL
-IG_BOARD_API_URL = os.getenv('IG_BOARD_API_URL', 'http://localhost:8301')
+IG_BOARD_API_URL = os.getenv('IG_BOARD_API_URL', 'https://ig-board.ig-pilot.com')
 
-# 문의하기 게시판 ID (환경 변수로 설정 가능)
-INQUIRY_BOARD_ID = int(os.getenv('INQUIRY_BOARD_ID', '2'))
+# FQA 게시판 ID (환경 변수로 설정 가능, 기본값: 1)
+INQUIRY_BOARD_ID = int(os.getenv('INQUIRY_BOARD_ID', '1'))
 
 # ig-board SECRET_KEY (토큰 생성용, 환경 변수로 설정)
 IG_BOARD_SECRET_KEY = os.getenv('IG_BOARD_SECRET_KEY')

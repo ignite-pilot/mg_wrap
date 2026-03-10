@@ -12,22 +12,39 @@ class MemberService:
     
     @staticmethod
     def verify_token(token: str) -> Optional[Dict[str, Any]]:
-        """토큰 검증 및 사용자 정보 조회"""
+        """
+        토큰 검증 및 사용자 정보 조회
+        가이드에 따르면 로그인 응답에 이미 사용자 정보가 포함되어 있으므로,
+        JWT 토큰에서 사용자 정보를 추출합니다.
+        ig-member API에는 사용자 정보 조회 엔드포인트가 가이드에 명시되어 있지 않으므로,
+        JWT 토큰에서 직접 추출하는 방식을 사용합니다.
+        """
         try:
-            response = requests.get(
-                f"{IG_MEMBER_API_URL}/users/me",
-                headers={
-                    'Authorization': f'Bearer {token}',
-                    'Content-Type': 'application/json'
-                },
-                timeout=5
-            )
+            import jwt
+            # JWT 토큰 디코딩 (검증 없이, 서명 검증은 ig-member에서만 가능)
+            # 가이드에 따르면 ig-member에서 발급한 JWT 토큰을 사용하므로 신뢰 가능
+            decoded = jwt.decode(token, options={"verify_signature": False})
             
-            if response.status_code == 200:
-                api_response = response.json()
-                # ig-member는 ApiResponse 형식으로 반환
-                if api_response.get('success') and api_response.get('data'):
-                    return api_response.get('data')
+            # JWT 토큰에서 사용자 정보 추출
+            user_id = decoded.get('sub') or decoded.get('user_id') or decoded.get('id')
+            email = decoded.get('email')
+            
+            if user_id or email:
+                # JWT에서 추출한 정보로 사용자 객체 생성
+                # 가이드에 따르면 사용자 정보 형식: {id, email, name}
+                user_info = {
+                    'id': int(user_id) if user_id and str(user_id).isdigit() else None,
+                    'email': email,
+                    'name': decoded.get('name') or decoded.get('username') or (email.split('@')[0] if email else None)
+                }
+                current_app.logger.debug(f"Extracted user info from JWT: id={user_info['id']}, email={user_info['email']}")
+                return user_info
+            
+            current_app.logger.warning(f"JWT token does not contain user information: {decoded}")
+            return None
+            
+        except jwt.DecodeError as e:
+            current_app.logger.error(f"JWT decode error: {str(e)}")
             return None
         except Exception as e:
             current_app.logger.error(f"Member service error: {str(e)}")

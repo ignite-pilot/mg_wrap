@@ -30,14 +30,14 @@ def oauth2_authorization(provider):
         # 콜백 URL 설정 (mg_wrap으로 돌아올 URL)
         # request.url_root는 프록시를 통해 요청이 올 때 올바르게 설정되지 않을 수 있으므로
         # Host 헤더를 사용하여 URL 구성
-        host = request.headers.get('Host', 'localhost:8401')
+        host = request.headers.get('Host', 'localhost:8400')
         scheme = request.headers.get('X-Forwarded-Proto', 'http')
         if ':' not in host:
             # 포트가 없는 경우 기본 포트 추가
             if scheme == 'https':
                 host = f"{host}:443"
             else:
-                host = f"{host}:8401"
+                host = f"{host}:8400"
         
         callback_url = f"{scheme}://{host}/api/auth/oauth2/callback"
         
@@ -135,17 +135,32 @@ def login():
         # ig-member API를 통한 로그인
         login_result = MemberService.login(email, password)
         
+        # 디버깅: login_result 구조 확인
+        from flask import current_app
+        current_app.logger.info(f"Login result type: {type(login_result)}, value: {login_result}")
+        
         if login_result:
-            token = login_result.get('token') or login_result.get('accessToken')
-            user = login_result.get('user') or login_result
+            # login_result는 ig-member API의 data 부분
+            # data 안에 token이 있을 수도 있고, 전체가 token일 수도 있음
+            token = (
+                login_result.get('token') if isinstance(login_result, dict) else None or 
+                login_result.get('accessToken') if isinstance(login_result, dict) else None or
+                login_result.get('access_token') if isinstance(login_result, dict) else None or
+                (login_result if isinstance(login_result, str) else None)
+            )
+            user = login_result.get('user') if isinstance(login_result, dict) else login_result
             
+            current_app.logger.info(f"Extracted token: {token is not None}, user: {user is not None}")
+            
+            # token이 문자열이거나 딕셔너리에 token이 있는 경우
             if token:
                 return jsonify({
                     'success': True,
-                    'token': token,
+                    'token': token if isinstance(token, str) else str(token),
                     'user': user
                 }), 200
         
+        current_app.logger.warning(f"Login failed for email: {email}")
         return jsonify({
             'success': False,
             'error': '로그인 실패'

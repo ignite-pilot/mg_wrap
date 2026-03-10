@@ -4,8 +4,8 @@ from enum import Enum as PyEnum
 from sqlalchemy import TypeDecorator, String
 
 class EnumType(TypeDecorator):
-    """PostgreSQL ENUM과 호환되는 Enum 타입"""
-    impl = String
+    """데이터베이스 독립적인 Enum 타입 (PostgreSQL, MySQL 모두 호환)"""
+    impl = String(50)  # MySQL에서는 VARCHAR 길이 지정 필요
     cache_ok = True
     
     def __init__(self, enum_class, *args, **kwargs):

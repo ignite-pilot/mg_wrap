@@ -61,11 +61,10 @@ DB 명 : mg-wrap
 - 개발 언어는 서버쪽은 Python을 활용하고, Front End는 괜찮은 걸로 알아서 진행
 
 - Server Port
-	- Frontend : 8400
-	- Backend : 8401
+	- 단일 서비스: 8400 (Frontend + Backend 통합)
 	- 접속 URL
-		- Frontend: http://localhost:8400
-		- Backend API: http://localhost:8401
+		- 서비스: http://localhost:8400
+		- API 엔드포인트: http://localhost:8400/api/*
 	- ig-board MCP Port
 		- ig-board Frontend: 8300
 		- ig-board Backend: 8301

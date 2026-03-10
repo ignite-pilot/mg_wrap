@@ -1,0 +1,38 @@
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8400
+ * Running on http://192.168.10.45:8400
+[33mPress CTRL+C to quit[0m
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 710-440-083
+127.0.0.1 - - [10/Mar/2026 17:41:37] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 17:41:51] "[36mGET / HTTP/1.1[0m" 304 -
+127.0.0.1 - - [10/Mar/2026 17:41:51] "[36mGET /assets/index-BLPjgOyH.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [10/Mar/2026 17:41:51] "[36mGET /assets/index-Cuc-3kyO.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [10/Mar/2026 17:41:51] "[35m[1mGET /assets/240912_hero-animation-CVfztD4N.mp4 HTTP/1.1[0m" 206 -
+127.0.0.1 - - [10/Mar/2026 17:41:51] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 17:41:51] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+[2026-03-10 17:42:14,273] INFO in auth: Login result type: <class 'dict'>, value: {'token': 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJ5dW5zaWsuY2hvQGlnbml0ZS5jby5rciIsImlhdCI6MTc3MzEzMjEzNCwiZXhwIjoxNzczMjE4NTM0fQ.TZzE7g_CfhVLYdwObnxsz5G57ik9iIZVegIfQ4U1skeCIiXDrczedRwZfcw21mFji7R8dYZDTqg7rm-64EV72A', 'user': {'id': 1, 'email': 'yunsik.cho@ignite.co.kr', 'name': '이그나이트 - 조윤식', 'provider': 'EMAIL', 'emailVerified': True}}
+[2026-03-10 17:42:14,274] INFO in auth: Extracted token: True, user: True
+127.0.0.1 - - [10/Mar/2026 17:42:14] "POST /api/auth/login HTTP/1.1" 200 -
+[2026-03-10 17:42:14,304] DEBUG in member_service: Extracted user info from JWT: id=1, email=yunsik.cho@ignite.co.kr
+[2026-03-10 17:42:14,304] DEBUG in member_service: Extracted user info from JWT: id=1, email=yunsik.cho@ignite.co.kr
+127.0.0.1 - - [10/Mar/2026 17:42:14] "GET /api/board/board HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 17:42:14] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 17:42:40] "[36mGET / HTTP/1.1[0m" 304 -
+127.0.0.1 - - [10/Mar/2026 17:42:40] "[36mGET /assets/index-BLPjgOyH.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [10/Mar/2026 17:42:40] "[36mGET /assets/index-Cuc-3kyO.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [10/Mar/2026 17:42:40] "[35m[1mGET /assets/240912_hero-animation-CVfztD4N.mp4 HTTP/1.1[0m" 206 -
+[2026-03-10 17:42:40,158] DEBUG in member_service: Extracted user info from JWT: id=1, email=yunsik.cho@ignite.co.kr
+[2026-03-10 17:42:40,158] DEBUG in member_service: Extracted user info from JWT: id=1, email=yunsik.cho@ignite.co.kr
+[2026-03-10 17:42:40,159] DEBUG in member_service: Extracted user info from JWT: id=1, email=yunsik.cho@ignite.co.kr
+127.0.0.1 - - [10/Mar/2026 17:42:40] "POST /api/auth/verify HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 17:42:40] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 17:42:40] "GET /api/board/board HTTP/1.1" 200 -

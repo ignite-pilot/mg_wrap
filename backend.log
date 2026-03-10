@@ -1,682 +1,876 @@
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
  * Serving Flask app 'app'
  * Debug mode: on
 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:8401
- * Running on http://192.168.10.133:8401
+ * Running on http://127.0.0.1:8400
+ * Running on http://172.30.1.63:8400
 [33mPress CTRL+C to quit[0m
  * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
  * Debugger is active!
- * Debugger PIN: 710-440-083
-127.0.0.1 - - [04/Dec/2025 15:30:09] "[35m[1mGET /api/board/board HTTP/1.1[0m" 500 -
-127.0.0.1 - - [04/Dec/2025 15:30:09] "[35m[1mGET /api/board/posts?page=1&per_page=10 HTTP/1.1[0m" 500 -
-127.0.0.1 - - [04/Dec/2025 15:30:09] "[35m[1mGET /api/board/posts?page=1&per_page=10 HTTP/1.1[0m" 500 -
-127.0.0.1 - - [04/Dec/2025 15:30:09] "[35m[1mGET /api/board/board HTTP/1.1[0m" 500 -
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run.py', reloading
- * Restarting with watchdog (fsevents)
- * Debugger is active!
- * Debugger PIN: 710-440-083
-127.0.0.1 - - [04/Dec/2025 15:30:28] "[35m[1mGET /api/board/posts?page=1&per_page=10 HTTP/1.1[0m" 500 -
-127.0.0.1 - - [04/Dec/2025 15:30:28] "[35m[1mGET /api/board/board HTTP/1.1[0m" 500 -
-127.0.0.1 - - [04/Dec/2025 15:30:28] "[35m[1mGET /api/board/board HTTP/1.1[0m" 500 -
-127.0.0.1 - - [04/Dec/2025 15:30:28] "[35m[1mGET /api/board/posts?page=1&per_page=10 HTTP/1.1[0m" 500 -
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
- * Restarting with watchdog (fsevents)
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
- * Restarting with watchdog (fsevents)
- * Debugger is active!
- * Debugger PIN: 710-440-083
-127.0.0.1 - - [04/Dec/2025 16:33:39] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 16:33:39] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 16:33:39] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 16:33:39] "GET /api/board/board HTTP/1.1" 200 -
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/__init__.py', reloading
- * Restarting with watchdog (fsevents)
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/__init__.py', reloading
- * Restarting with watchdog (fsevents)
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/__init__.py', reloading
- * Restarting with watchdog (fsevents)
- * Debugger is active!
- * Debugger PIN: 710-440-083
+ * Debugger PIN: 527-339-167
+127.0.0.1 - - [14/Dec/2025 20:55:13] "GET /api/health HTTP/1.1" 200 -
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/utils/common.py', reloading
  * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/utils.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/utils.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/utils.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/retrieval.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/retrieval.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/disposal.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/retrieval.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/__init__.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/utils.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/retrieval.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/disposal.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/__init__.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/utils.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/retrieval.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/disposal.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run_tests_and_security.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run_tests_and_security.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run_tests_and_security.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run_tests_and_security.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run_tests_and_security.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run_tests_and_security.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run_tests_and_security.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run_tests_and_security.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run_tests_and_security.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
-127.0.0.1 - - [04/Dec/2025 18:51:15] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 18:51:15] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 18:51:15] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 18:51:15] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/services/member_service.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/services/member_service.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/services/member_service.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/models.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/disposal.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/retrieval.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/services/member_service.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/services/member_service.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/services/member_service.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/conftest.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/conftest.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/conftest.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/conftest.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_security.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_security.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_security.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_security.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/conftest.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/conftest.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/services/member_service.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/models.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/retrieval.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/disposal.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/conftest.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_auth.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_security.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/services/member_service.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/models.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/storage.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/retrieval.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/disposal.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/assets.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/conftest.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_auth.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/tests/test_security.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
-127.0.0.1 - - [04/Dec/2025 19:04:33] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:04:33] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:04:33] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:04:33] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:04:42] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:04:42] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:04:42] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:04:42] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:04:43] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:04:43] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:04:43] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:04:43] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:04:44] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:04:44] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:04:44] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:04:44] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:08:38] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:08:38] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:08:38] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:08:38] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:08:39] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:08:39] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:08:39] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:08:39] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:09:52] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:09:52] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:09:52] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:09:52] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:10:38] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:10:38] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:10:38] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:10:38] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:10:39] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:10:39] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:10:39] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:10:40] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
-127.0.0.1 - - [04/Dec/2025 19:11:42] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:11:42] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:11:42] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:11:42] "GET /api/board/board HTTP/1.1" 200 -
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
-127.0.0.1 - - [04/Dec/2025 19:12:05] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:12:05] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:12:05] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:12:05] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:13:42] "POST /api/auth/login HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:13:43] "POST /api/auth/verify HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:13:43] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:13:43] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:13:43] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:13:43] "GET /api/board/board HTTP/1.1" 200 -
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
-127.0.0.1 - - [04/Dec/2025 19:17:51] "POST /api/auth/verify HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:17:51] "POST /api/auth/verify HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:17:51] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:17:51] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:17:51] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:17:51] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:17:54] "GET /api/board/posts/4 HTTP/1.1" 200 -
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
-127.0.0.1 - - [04/Dec/2025 19:21:39] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:21:39] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:21:39] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:21:39] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
-127.0.0.1 - - [04/Dec/2025 19:21:56] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:21:56] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:21:56] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:21:56] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
-127.0.0.1 - - [04/Dec/2025 19:22:02] "[32mGET /api/auth/oauth2/authorization/google HTTP/1.1[0m" 302 -
-127.0.0.1 - - [04/Dec/2025 19:22:06] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:22:06] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:22:06] "GET /api/board/posts?page=1&per_page=10 HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:22:06] "GET /api/board/board HTTP/1.1" 200 -
-127.0.0.1 - - [04/Dec/2025 19:22:10] "[32mGET /api/auth/oauth2/authorization/google HTTP/1.1[0m" 302 -
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/__init__.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
-127.0.0.1 - - [04/Dec/2025 19:24:16] "OPTIONS /api/auth/oauth2/authorization/google HTTP/1.1" 200 -
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/__init__.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
-127.0.0.1 - - [04/Dec/2025 19:25:04] "[32mGET /api/auth/oauth2/authorization/google HTTP/1.1[0m" 302 -
-127.0.0.1 - - [04/Dec/2025 19:25:08] "[32mGET /api/auth/oauth2/authorization/google HTTP/1.1[0m" 302 -
-127.0.0.1 - - [04/Dec/2025 19:25:11] "[32mGET /api/auth/oauth2/authorization/google HTTP/1.1[0m" 302 -
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
-127.0.0.1 - - [04/Dec/2025 19:27:41] "[32mGET /api/auth/oauth2/authorization/naver HTTP/1.1[0m" 302 -
-127.0.0.1 - - [04/Dec/2025 19:27:44] "[32mGET /api/auth/oauth2/authorization/naver HTTP/1.1[0m" 302 -
-127.0.0.1 - - [04/Dec/2025 19:27:46] "[32mGET /api/auth/oauth2/authorization/google HTTP/1.1[0m" 302 -
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
-127.0.0.1 - - [04/Dec/2025 19:28:22] "[32mGET /api/auth/oauth2/authorization/google HTTP/1.1[0m" 302 -
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
-127.0.0.1 - - [04/Dec/2025 19:30:15] "[32mGET /api/auth/oauth2/authorization/google HTTP/1.1[0m" 302 -
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
- * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/auth.py', reloading
- * Restarting with watchdog (fsevents)
-/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
-  warnings.warn(
- * Debugger is active!
- * Debugger PIN: 710-440-083
-/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/resource_tracker.py:297: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-sxzkbjue'}
-  warnings.warn(
-/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/resource_tracker.py:297: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-o04gn780'}
-  warnings.warn(
+ * Detected change in '/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/utils/__init__.py', reloading
+ * Restarting with watchdog (fsevents)
+/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/routes/board.py:19: UserWarning: IG_BOARD_SECRET_KEY is not set. Board integration may not work properly. Set it in .env file for production use.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 527-339-167
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/log.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/events.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/inspection.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/exc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/schema.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/connectors/asyncio.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/connectors/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/connectors/aioodbc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/connectors/pyodbc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/queue.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/_concurrency_py3k.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/topological.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/compat.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/preloaded.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/concurrency.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/_has_cy.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/deprecations.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/_collections.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/langhelpers.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/typing.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/tool_support.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/_py_collections.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/instrumentation.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/compiler.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/orderinglist.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/hybrid.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/indexable.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/serializer.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/baked.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/automap.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/horizontal_shard.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mutable.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/associationproxy.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/names.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/plugin.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/infer.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/decl_class.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/apply.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/declarative/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/declarative/extensions.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/scoping.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/session.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/result.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/engine.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/exc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/pickleable.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/exclusions.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/config.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/engines.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/warnings.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/asyncio.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/assertions.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/assertsql.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/provision.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/requirements.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/entities.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/profiling.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/schema.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/plugin/bootstrap.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/plugin/plugin_base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/plugin/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/plugin/pytestplugin.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/fixtures/orm.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/fixtures/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/fixtures/mypy.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/fixtures/sql.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/fixtures/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_sequence.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_results.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_insert.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_select.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_deprecations.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_ddl.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_dialect.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_update_delete.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_reflection.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_rowcount.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_cte.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_unicode_ddl.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/cyextension/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/_typing.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/pg_catalog.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/_psycopg_common.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/psycopg2cffi.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/psycopg.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/ranges.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/provision.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/pg8000.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/operators.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/array.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/dml.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/json.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/named_types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/ext.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/hstore.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/vector.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/oracledb.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/provision.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/cx_oracle.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/dictionary.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/pysqlcipher.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/provision.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/dml.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/json.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/pysqlite.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/enumerated.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/mysqlconnector.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/asyncmy.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/aiomysql.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/reserved_words.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/reflection.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/mariadbconnector.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/mariadb.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/provision.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/mysqldb.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/pymysql.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/dml.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/expression.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/json.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/pyodbc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/cymysql.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/pymssql.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/provision.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/aioodbc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/information_schema.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/json.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/pyodbc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/sync.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/interfaces.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/decl_base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/instrumentation.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/loading.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/persistence.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/_typing.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/path_registry.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/query.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/strategies.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/strategy_options.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/properties.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/events.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/mapper.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/mapped_collection.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/scoping.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/clsregistry.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/session.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/writeonly.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/dynamic.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/context.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/exc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/collections.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/_orm_constructors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/dependency.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/descriptor_props.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/decl_api.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/bulk_persistence.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/identity.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/state_changes.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/evaluator.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/unitofwork.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/relationships.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/state.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/interfaces.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/_py_row.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/characteristics.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/create.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/strategies.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/events.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/reflection.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/url.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/result.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/default.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/_py_processors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/processors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/row.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/mock.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/_py_util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/pool/events.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/pool/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/pool/impl.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/pool/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/event/legacy.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/event/registry.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/event/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/event/api.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/event/attr.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/event/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/future/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/future/engine.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/functions.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/annotation.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/ddl.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/_selectable_constructors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/compiler.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/_typing.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/traversals.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/cache_key.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/roles.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/naming.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/visitors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/events.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/default_comparator.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/elements.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/_dml_constructors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/_elements_constructors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/sqltypes.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/operators.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/selectable.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/dml.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/coercions.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/expression.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/type_api.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/crud.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/lambdas.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/schema.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/_orm_types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/_py_util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/events.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/events.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/exc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/exc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/inspection.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/inspection.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/log.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/log.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/schema.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/schema.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/connectors/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/connectors/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/connectors/aioodbc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/connectors/aioodbc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/connectors/asyncio.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/connectors/asyncio.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/connectors/pyodbc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/connectors/pyodbc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/cyextension/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/cyextension/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/_typing.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/_typing.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/aioodbc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/aioodbc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/information_schema.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/information_schema.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/json.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/json.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/provision.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/provision.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/pymssql.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/pymssql.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/pyodbc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mssql/pyodbc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/aiomysql.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/aiomysql.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/asyncmy.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/asyncmy.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/cymysql.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/cymysql.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/dml.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/dml.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/enumerated.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/enumerated.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/expression.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/expression.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/json.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/json.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/mariadb.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/mariadb.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/mariadbconnector.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/mariadbconnector.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/mysqlconnector.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/mysqlconnector.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/mysqldb.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/mysqldb.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/provision.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/provision.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/pymysql.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/pymysql.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/pyodbc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/pyodbc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/reflection.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/reflection.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/reserved_words.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/reserved_words.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/mysql/types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/cx_oracle.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/cx_oracle.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/dictionary.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/dictionary.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/oracledb.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/oracledb.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/provision.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/provision.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/oracle/types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/_psycopg_common.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/_psycopg_common.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/array.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/array.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/dml.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/dml.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/ext.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/ext.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/hstore.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/hstore.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/json.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/json.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/named_types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/named_types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/operators.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/operators.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/pg8000.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/pg8000.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/pg_catalog.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/pg_catalog.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/provision.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/provision.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/psycopg.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/psycopg.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/psycopg2cffi.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/psycopg2cffi.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/ranges.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/ranges.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/postgresql/types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/dml.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/dml.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/json.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/json.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/provision.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/provision.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/pysqlcipher.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/pysqlcipher.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/pysqlite.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/dialects/sqlite/pysqlite.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/_py_processors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/_py_processors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/_py_row.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/_py_row.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/_py_util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/_py_util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/characteristics.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/characteristics.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/create.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/create.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/default.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/default.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/events.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/events.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/interfaces.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/interfaces.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/mock.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/mock.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/processors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/processors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/reflection.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/reflection.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/result.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/result.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/row.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/row.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/strategies.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/strategies.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/url.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/url.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/event/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/event/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/event/api.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/event/api.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/event/attr.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/event/attr.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/event/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/event/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/event/legacy.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/event/legacy.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/event/registry.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/event/registry.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/associationproxy.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/associationproxy.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/automap.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/automap.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/baked.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/baked.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/compiler.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/compiler.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/horizontal_shard.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/horizontal_shard.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/hybrid.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/hybrid.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/indexable.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/indexable.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/instrumentation.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/instrumentation.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mutable.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mutable.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/orderinglist.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/orderinglist.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/serializer.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/serializer.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/engine.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/engine.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/exc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/exc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/result.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/result.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/scoping.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/scoping.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/session.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/asyncio/session.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/declarative/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/declarative/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/declarative/extensions.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/declarative/extensions.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/apply.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/apply.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/decl_class.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/decl_class.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/infer.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/infer.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/names.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/names.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/plugin.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/plugin.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/ext/mypy/util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/future/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/future/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/future/engine.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/future/engine.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/_orm_constructors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/_orm_constructors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/_typing.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/_typing.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/attributes.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/bulk_persistence.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/bulk_persistence.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/clsregistry.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/clsregistry.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/collections.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/collections.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/context.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/context.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/decl_api.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/decl_api.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/decl_base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/decl_base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/dependency.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/dependency.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/descriptor_props.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/descriptor_props.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/dynamic.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/dynamic.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/evaluator.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/evaluator.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/events.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/events.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/exc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/exc.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/identity.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/identity.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/instrumentation.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/instrumentation.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/interfaces.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/interfaces.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/loading.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/loading.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/mapped_collection.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/mapped_collection.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/mapper.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/mapper.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/path_registry.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/path_registry.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/persistence.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/persistence.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/properties.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/properties.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/query.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/query.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/relationships.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/relationships.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/scoping.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/scoping.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/session.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/session.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/state.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/state.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/state_changes.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/state_changes.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/strategies.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/strategies.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/strategy_options.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/strategy_options.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/sync.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/sync.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/unitofwork.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/unitofwork.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/writeonly.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/orm/writeonly.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/pool/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/pool/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/pool/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/pool/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/pool/events.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/pool/events.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/pool/impl.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/pool/impl.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/_dml_constructors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/_dml_constructors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/_elements_constructors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/_elements_constructors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/_orm_types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/_orm_types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/_py_util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/_py_util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/_selectable_constructors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/_selectable_constructors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/_typing.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/_typing.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/annotation.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/annotation.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/cache_key.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/cache_key.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/coercions.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/coercions.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/compiler.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/compiler.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/crud.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/crud.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/ddl.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/ddl.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/default_comparator.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/default_comparator.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/dml.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/dml.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/elements.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/elements.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/events.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/events.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/expression.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/expression.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/functions.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/functions.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/lambdas.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/lambdas.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/naming.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/naming.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/operators.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/operators.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/roles.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/roles.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/schema.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/schema.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/selectable.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/selectable.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/sqltypes.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/sqltypes.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/traversals.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/traversals.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/type_api.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/type_api.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/visitors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/visitors.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/assertions.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/assertions.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/assertsql.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/assertsql.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/asyncio.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/asyncio.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/config.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/config.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/engines.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/engines.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/entities.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/entities.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/exclusions.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/exclusions.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/pickleable.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/pickleable.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/profiling.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/profiling.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/provision.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/provision.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/requirements.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/requirements.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/schema.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/schema.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/util.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/warnings.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/warnings.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/fixtures/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/fixtures/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/fixtures/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/fixtures/base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/fixtures/mypy.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/fixtures/mypy.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/fixtures/orm.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/fixtures/orm.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/fixtures/sql.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/fixtures/sql.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/plugin/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/plugin/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/plugin/bootstrap.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/plugin/bootstrap.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/plugin/plugin_base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/plugin/plugin_base.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/plugin/pytestplugin.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/plugin/pytestplugin.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_cte.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_cte.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_ddl.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_ddl.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_deprecations.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_deprecations.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_dialect.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_dialect.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_insert.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_insert.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_reflection.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_reflection.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_results.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_results.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_rowcount.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_rowcount.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_select.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_select.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_sequence.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_sequence.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_types.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_unicode_ddl.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_unicode_ddl.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_update_delete.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/testing/suite/test_update_delete.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/__init__.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/_collections.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/_collections.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/_concurrency_py3k.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/_concurrency_py3k.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/_has_cy.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/_has_cy.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/_py_collections.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/_py_collections.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/compat.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/compat.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/concurrency.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/concurrency.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/deprecations.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/deprecations.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/langhelpers.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/langhelpers.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/preloaded.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/preloaded.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/queue.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/queue.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/tool_support.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/tool_support.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/topological.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/topological.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/typing.py', reloading
+ * Detected change in '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/typing.py', reloading
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/util.py", line 367, in _run_finalizers
+    finalizer()
+    ~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/util.py", line 291, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/util.py", line 145, in _remove_temp_dir
+    rmtree(tempdir)
+    ~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/shutil.py", line 721, in _rmtree_safe_fd
+    _rmtree_safe_fd_step(stack, onexc)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/shutil.py", line 799, in _rmtree_safe_fd_step
+    onexc(func, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/shutil.py", line 760, in _rmtree_safe_fd_step
+    orig_st = os.lstat(name, dir_fd=dirfd)
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/77/c70nl85j0qgbqgxj5mc46fkh0000gn/T/pymp-5tfexjoz'
+ * Restarting with watchdog (fsevents)
+Traceback (most recent call last):
+  File "/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/run.py", line 1, in <module>
+    from app import create_app, db
+  File "/Users/ignite/Documents/AI Coding/cursor_project/mg_wrap/app/__init__.py", line 3, in <module>
+    from flask_sqlalchemy import SQLAlchemy
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/flask_sqlalchemy/__init__.py", line 5, in <module>
+    from .extension import SQLAlchemy
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/flask_sqlalchemy/extension.py", line 9, in <module>
+    import sqlalchemy as sa
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/__init__.py", line 13, in <module>
+    from .engine import AdaptedConnection as AdaptedConnection
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/__init__.py", line 18, in <module>
+    from . import events as events
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/events.py", line 19, in <module>
+    from .base import Connection
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 30, in <module>
+    from .interfaces import BindTyping
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/engine/interfaces.py", line 38, in <module>
+    from ..sql.compiler import Compiled as Compiled
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/__init__.py", line 14, in <module>
+    from .compiler import COLLECT_CARTESIAN_PRODUCTS as COLLECT_CARTESIAN_PRODUCTS
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/compiler.py", line 61, in <module>
+    from . import crud
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/crud.py", line 34, in <module>
+    from . import dml
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/dml.py", line 34, in <module>
+    from . import util as sql_util
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/util.py", line 46, in <module>
+    from .ddl import sort_tables as sort_tables  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/ddl.py", line 30, in <module>
+    from .elements import ClauseElement
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/sql/elements.py", line 808, in <module>
+    class SQLCoreOperations(Generic[_T_co], ColumnOperators, TypingOnly):
+    ...<472 lines>...
+                ...
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/typing.py", line 1161, in _generic_init_subclass
+    super(Generic, cls).__init_subclass__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/sqlalchemy/util/langhelpers.py", line 1988, in __init_subclass__
+    raise AssertionError(
+    ...<2 lines>...
+    )
+AssertionError: Class <class 'sqlalchemy.sql.elements.SQLCoreOperations'> directly inherits TypingOnly but has additional attributes {'__firstlineno__', '__static_attributes__'}.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/util.py", line 367, in _run_finalizers
+    finalizer()
+    ~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/util.py", line 291, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/util.py", line 145, in _remove_temp_dir
+    rmtree(tempdir)
+    ~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/shutil.py", line 721, in _rmtree_safe_fd
+    _rmtree_safe_fd_step(stack, onexc)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/shutil.py", line 799, in _rmtree_safe_fd_step
+    onexc(func, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/shutil.py", line 760, in _rmtree_safe_fd_step
+    orig_st = os.lstat(name, dir_fd=dirfd)
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/77/c70nl85j0qgbqgxj5mc46fkh0000gn/T/pymp-_rswftyo'
