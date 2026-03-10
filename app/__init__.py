@@ -21,13 +21,8 @@ def create_app():
         app = Flask(__name__)
 
     # Configuration
-    secret_key = os.getenv('SECRET_KEY')
-    if not secret_key:
-        raise ValueError(
-            "SECRET_KEY must be set in .env file. "
-            "Generate a secure random key for production use."
-        )
-    app.config['SECRET_KEY'] = secret_key
+    # 테스트 프로젝트용 하드코딩된 SECRET_KEY
+    app.config['SECRET_KEY'] = 'test-secret-key-for-development-only-do-not-use-in-production'
     
     # MySQL 연결 설정 (AWS Secrets Manager에서 가져오기)
     mysql_info = get_mysql_info()
