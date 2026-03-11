@@ -8,6 +8,16 @@ const STATUS_MAP = {
   'cancelled': { text: '취소됨', badge: 'danger' }
 }
 
+const ASSET_CATEGORIES = {
+  'office_supplies': '사무용품',
+  'documents': '서류',
+  'equipment': '장비',
+  'furniture': '가구',
+  'clothing': '의류',
+  'appliances': '가전',
+  'other': '기타'
+}
+
 function Disposal() {
   const [requests, setRequests] = useState([])
   const [loading, setLoading] = useState(false)
@@ -22,7 +32,11 @@ function Disposal() {
     try {
       const response = await api.get('/disposal/list')
       if (response.data.success) {
-        setRequests(response.data.disposal_requests)
+        // 취소된 항목 제외
+        const filteredRequests = response.data.disposal_requests.filter(
+          request => request.status !== 'cancelled'
+        )
+        setRequests(filteredRequests)
       }
     } catch (error) {
       console.error('Failed to load disposal requests:', error)
@@ -68,6 +82,7 @@ function Disposal() {
                 <th>보관 신청일</th>
                 <th>보관 시작일</th>
                 <th>자산 분류</th>
+                <th>특이사항</th>
                 <th>신청일</th>
                 <th>상태</th>
                 <th>작업</th>
@@ -81,7 +96,8 @@ function Disposal() {
                     <td>{request.asset?.asset_number}</td>
                     <td>{request.asset?.application_date ? new Date(request.asset.application_date).toLocaleDateString('ko-KR') : '-'}</td>
                     <td>{request.asset?.storage_start_date ? new Date(request.asset.storage_start_date).toLocaleDateString('ko-KR') : '-'}</td>
-                    <td>{request.asset?.asset_category || '-'}</td>
+                    <td>{request.asset?.asset_category ? ASSET_CATEGORIES[request.asset.asset_category] || request.asset.asset_category : '-'}</td>
+                    <td>{request.asset?.special_notes || '-'}</td>
                     <td>{new Date(request.requested_at).toLocaleDateString('ko-KR')}</td>
                     <td>
                       <span className={`badge badge-${status.badge}`}>

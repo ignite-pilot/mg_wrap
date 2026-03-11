@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import DatePicker from 'react-datepicker'
+import { ko } from 'date-fns/locale'
+import 'react-datepicker/dist/react-datepicker.css'
 import api from '../services/api'
 import './Assets.css'
 
@@ -204,11 +207,23 @@ function Assets() {
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label>보관 신청일 *</label>
-                <input
-                  type="date"
-                  value={formData.application_date}
-                  onChange={(e) => setFormData({ ...formData, application_date: e.target.value })}
+                <DatePicker
+                  selected={formData.application_date ? new Date(formData.application_date) : null}
+                  onChange={(date) => {
+                    const dateString = date ? date.toISOString().split('T')[0] : ''
+                    setFormData({ ...formData, application_date: dateString })
+                  }}
+                  dateFormat="yyyy년 MM월 dd일"
+                  placeholderText="날짜를 선택하세요"
+                  className="date-picker-input"
+                  locale={ko}
                   required
+                  isClearable
+                  showYearDropdown
+                  showMonthDropdown
+                  dropdownMode="select"
+                  yearDropdownItemNumber={15}
+                  scrollableYearDropdown
                 />
               </div>
 
