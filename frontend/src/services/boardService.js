@@ -14,6 +14,18 @@ export const getPost = async (postId) => {
   return response.data
 }
 
+// 게시글 조회수 증가
+export const incrementViewCount = async (postId) => {
+  try {
+    const response = await api.post(`/board/posts/${postId}/view`)
+    return response.data
+  } catch (error) {
+    // 조회수 증가 실패해도 에러를 throw하지 않음
+    console.warn('조회수 증가 실패:', error)
+    return { success: false }
+  }
+}
+
 // 게시글 작성
 export const createPost = async (postData) => {
   const response = await api.post('/board/posts', postData)

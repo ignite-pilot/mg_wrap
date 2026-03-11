@@ -155,6 +155,35 @@ def get_post(post_id):
         from app.utils import handle_error
         return handle_error(e, "게시판 요청 처리 중 오류가 발생했습니다.")
 
+@board_bp.route('/posts/<int:post_id>/view', methods=['POST'])
+def increment_view_count(post_id):
+    """게시글 조회수 증가"""
+    try:
+        url = f"{IG_BOARD_API_URL}/api/posts/{post_id}/view"
+        
+        # 헤더 생성 시 예외가 발생할 수 있으므로 안전하게 처리
+        try:
+            headers = get_ig_board_headers()
+        except Exception as e:
+            from flask import current_app
+            current_app.logger.warning(f"Failed to get board headers: {str(e)}")
+            headers = {'Content-Type': 'application/json'}
+        
+        response = requests.post(url, headers=headers, timeout=10)
+        
+        # 조회수 증가가 실패해도 에러를 반환하지 않고 로그만 기록
+        if response.status_code >= 400:
+            from flask import current_app
+            current_app.logger.warning(f"Failed to increment view count for post {post_id}: {response.status_code}")
+        
+        # 성공 여부와 관계없이 200 반환 (조회수 증가 실패해도 게시글 조회는 가능)
+        return jsonify({'success': response.status_code < 400}), 200
+    except requests.exceptions.RequestException as e:
+        from flask import current_app
+        current_app.logger.warning(f"Failed to increment view count: {str(e)}")
+        # 조회수 증가 실패해도 에러를 반환하지 않음
+        return jsonify({'success': False}), 200
+
 @board_bp.route('/posts', methods=['POST'])
 def create_post():
     """게시글 작성"""

@@ -103,6 +103,31 @@
   transform: none;
 }
 
+/* 회원 가입 및 비밀번호 찾기 링크 */
+.login-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.login-link {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.login-link:hover {
+  color: #667eea;
+  text-decoration: underline;
+}
+
+.link-divider {
+  color: #4b5563;
+}
+
 /* 구분선 */
 .divider {
   display: flex;

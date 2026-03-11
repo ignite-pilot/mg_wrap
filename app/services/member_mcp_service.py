@@ -4,7 +4,7 @@ from typing import Optional, Dict, Any
 
 # ig-member MCP 서버 설정
 IG_MEMBER_MCP_SERVER_URL = os.getenv('IG_MEMBER_MCP_SERVER_URL', 'http://localhost:8202')
-IG_MEMBER_API_URL = os.getenv('IG_MEMBER_API_URL', 'http://localhost:8201/api')
+IG_MEMBER_API_URL = os.getenv('IG_MEMBER_API_URL', 'https://ig-member.ig-pilot.com/api')
 
 class MemberMCPService:
     """ig-member MCP 서비스 클라이언트"""

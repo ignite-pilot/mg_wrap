@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getPosts, getPost, getBoardInfo } from '../services/boardService'
+import { getPosts, getPost, getBoardInfo, incrementViewCount } from '../services/boardService'
 import './InquiryBoard.css'
 
 function InquiryBoard() {
@@ -9,6 +9,7 @@ function InquiryBoard() {
   const [page, setPage] = useState(1)
   const [selectedPost, setSelectedPost] = useState(null)
   const [boardName, setBoardName] = useState('문의하기')
+  const [boardId, setBoardId] = useState(null)
 
   useEffect(() => {
     loadBoardInfo()
@@ -19,8 +20,13 @@ function InquiryBoard() {
   const loadBoardInfo = async () => {
     try {
       const boardInfo = await getBoardInfo()
-      if (boardInfo && boardInfo.name) {
-        setBoardName(boardInfo.name)
+      if (boardInfo) {
+        if (boardInfo.name) {
+          setBoardName(boardInfo.name)
+        }
+        if (boardInfo.id) {
+          setBoardId(boardInfo.id)
+        }
       }
     } catch (err) {
       console.error('게시판 정보 로드 오류:', err)
@@ -52,9 +58,24 @@ function InquiryBoard() {
     // 게시글 상세 정보 가져오기 (본문 포함)
     setLoading(true)
     try {
+      // 조회수 증가 (비동기로 실행, 실패해도 게시글 조회는 계속 진행)
+      incrementViewCount(post.id).then(() => {
+        // 조회수 증가 후 목록 새로고침
+        loadPosts()
+      }).catch(() => {
+        // 조회수 증가 실패해도 무시
+      })
+      
       const postDetail = await getPost(post.id)
       console.log('게시글 상세 정보:', postDetail) // 디버깅용
       setSelectedPost(postDetail)
+      
+      // 조회수 업데이트를 위해 목록의 해당 게시글도 업데이트
+      setPosts(prevPosts => 
+        prevPosts.map(p => 
+          p.id === post.id ? { ...p, view_count: (p.view_count || 0) + 1 } : p
+        )
+      )
     } catch (err) {
       console.error('게시글 상세 정보를 불러오는데 실패했습니다.', err)
       setError('게시글을 불러오는데 실패했습니다.')
@@ -107,7 +128,8 @@ function InquiryBoard() {
                   {post.title}
                 </h3>
                 <div className="post-meta">
-                  <span className="post-author">{post.author_name}</span>
+                  {/* FAQ 게시판(ID: 1)에서는 글쓴이 이름 비노출 */}
+                  {boardId !== 1 && <span className="post-author">{post.author_name}</span>}
                   <span className="post-date">{formatDate(post.created_at)}</span>
                   <span className="post-stats">
                     조회 {post.view_count}

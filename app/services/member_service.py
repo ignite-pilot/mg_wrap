@@ -5,7 +5,7 @@ from typing import Optional, Dict, Any
 from flask import current_app
 
 # ig-member API 기본 URL
-IG_MEMBER_API_URL = os.getenv('IG_MEMBER_API_URL', 'http://localhost:8201/api')
+IG_MEMBER_API_URL = os.getenv('IG_MEMBER_API_URL', 'https://ig-member.ig-pilot.com/api')
 
 class MemberService:
     """ig-member API 클라이언트"""

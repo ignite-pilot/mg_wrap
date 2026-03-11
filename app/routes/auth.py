@@ -42,7 +42,7 @@ def oauth2_authorization(provider):
         callback_url = f"{scheme}://{host}/api/auth/oauth2/callback"
         
         # ig-member API를 통한 OAuth2 인증 URL 생성
-        IG_MEMBER_API_URL = os.getenv('IG_MEMBER_API_URL', 'http://localhost:8201/api')
+        IG_MEMBER_API_URL = os.getenv('IG_MEMBER_API_URL', 'https://ig-member.ig-pilot.com/api')
         oauth_url = f"{IG_MEMBER_API_URL}/login/oauth2/authorization/{provider}?redirect_uri={callback_url}"
         
         # 디버깅: 리다이렉트 URL 로깅
